@@ -14,7 +14,7 @@ See the License for the specific language governing permissions and
 limitations under the License.
 -->
 # Spring Grow
-[![Build Status](https://travis-ci.org/alexander-perucci/spring-grow.svg?branch=master)](https://travis-ci.org/alexander-perucci/spring-grow)
+[![Build Status](https://travis-ci.org/alexander-perucci/spring-grow.svg?branch=master)](https://travis-ci.org/alexander-perucci/spring-grow) [![Maven Central](https://maven-badges.herokuapp.com/maven-central/com.alexanderperucci/spring-grow/badge.svg?style=plastic)](https://maven-badges.herokuapp.com/maven-central/com.alexanderperucci/spring-grow)
 
 
 ## What the hank?
@@ -43,21 +43,15 @@ __Technological features:__
 
 ## How do I create a new Spring MVC web application using 'grow'?
 
-Spring-grow is not available in maven central (for now), hence you need first to install the archetype in your maven local repository.
+Spring-grow is available in maven central repository so you don't need to build the project locally. In order to create your Spring MVC web application, you need to run the `mvn archetype:generate` as follow:
 
-To install the archetype:
-
-Download the archetype and run `mvn clean install` root archetype directory.
-
-Now, you are able to create your Spring MVC web application running:
-
-`mvn archetype:generate -DgroupId=YOUR_WEB_APPLICATION_GROUP_ID -DartifactId=YOUR_WEB_APPLICATION_ARTIFACT_ID -Dversion=YOUR_WEB_APPLICATION_VERSION -DwebApplicationName=YOUR_WEB_APPLICATION_NAME -Dpackage=YOUR_WEB_APPLICATION_ROOT_JAVA_PACKAGE -DarchetypeGroupId=com.alexanderperucci -DarchetypeArtifactId=spring-grow -DarchetypeVersion=1.0.0-SNAPSHOT -DinteractiveMode=false -q`
+`mvn archetype:generate -DgroupId=YOUR_WEB_APPLICATION_GROUP_ID -DartifactId=YOUR_WEB_APPLICATION_ARTIFACT_ID -Dversion=YOUR_WEB_APPLICATION_VERSION -DwebApplicationName=YOUR_WEB_APPLICATION_NAME -Dpackage=YOUR_WEB_APPLICATION_ROOT_JAVA_PACKAGE -DarchetypeGroupId=com.alexanderperucci -DarchetypeArtifactId=spring-grow -DarchetypeVersion=1.0.1 -DinteractiveMode=false`
 
 Example:
 
-`mvn archetype:generate -DgroupId=com.library -DartifactId=movies -Dversion=1.0.0-SNAPSHOT -DwebApplicationName='Library of Movies' -Dpackage=com.library.movies -DarchetypeGroupId=com.alexanderperucci -DarchetypeArtifactId=spring-grow -DarchetypeVersion=1.0.0-SNAPSHOT -DinteractiveMode=false -q`
+`mvn archetype:generate -DgroupId=com.library -DartifactId=movies -Dversion=1.0.0-SNAPSHOT -DwebApplicationName='Library of Movies' -Dpackage=com.library.movies -DarchetypeGroupId=com.alexanderperucci -DarchetypeArtifactId=spring-grow -DarchetypeVersion=1.0.1 -DinteractiveMode=false`
 
-This will create a template of the secured web application locally.
+This will create a template of the secured web application locally named [YOUR_WEB_APPLICATION_ARTIFACT_ID].
 
 ## Can I try the created Spring MVC web application without change anything?
 
