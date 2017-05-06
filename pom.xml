@@ -56,11 +56,29 @@ limitations under the License.
       <tag>spring-grow-1.0.0</tag>
    </scm>
 
+   <issueManagement>
+      <url>https://github.com/alexander-perucci/spring-grow/issues</url>
+      <system>GitHub Issues</system>
+   </issueManagement>
+
+   <distributionManagement>
+      <repository>
+         <id>oss-sonatype-releases</id>
+         <name>OSS sonatype Release Repository</name>
+         <url>https://oss.sonatype.org/service/local/staging/deploy/maven2/</url>
+      </repository>
+      <snapshotRepository>
+         <id>oss-sonatype-snapshots</id>
+         <name>OSS sonatype Snapshots Repository</name>
+         <url>https://oss.sonatype.org/content/repositories/snapshots/</url>
+      </snapshotRepository>
+   </distributionManagement>
+
    <developers>
       <developer>
          <id>alexander_perucci</id>
          <name>Alexander Perucci</name>
-         <email>alexander.perucci@gmail.com</email>
+         <email>aleale89@hotmail.it</email>
          <url>http://www.alexanderperucci.com/</url>
          <roles>
             <role>developer</role>
