@@ -19,7 +19,7 @@ limitations under the License.
  
    <groupId>com.alexanderperucci</groupId>
    <artifactId>spring-grow</artifactId>
-   <version>1.0.1</version>
+   <version>1.0.2-SNAPSHOT</version>
    <packaging>jar</packaging>
 
    <name>spring-grow</name>
@@ -53,7 +53,7 @@ limitations under the License.
       <connection>scm:git:git@github.com:alexander-perucci/spring-grow.git</connection>
       <developerConnection>scm:git:git@github.com:alexander-perucci/spring-grow.git</developerConnection>
       <url>git@github.com:alexander-perucci/spring-grow.git</url>
-      <tag>spring-grow-1.0.1</tag>
+      <tag>spring-grow-1.0.0</tag>
    </scm>
 
    <issueManagement>
