@@ -35,6 +35,7 @@ limitations under the License.
       <maven-source-plugin.version>3.0.1</maven-source-plugin.version>
       <license-maven-plugin.version>3.0</license-maven-plugin.version>
       <apache-rat-plugin.version>0.12</apache-rat-plugin.version>
+      <maven-invoker-plugin.version>2.0.0</maven-invoker-plugin.version>
       <maven-release-plugin.version>2.5.3</maven-release-plugin.version>
       <maven-deploy-plugin.version>2.8.2</maven-deploy-plugin.version>
       <maven-gpg-plugin.version>1.6</maven-gpg-plugin.version>
@@ -108,6 +109,40 @@ limitations under the License.
                   <phase>verify</phase>
                   <goals>
                      <goal>check</goal>
+                  </goals>
+               </execution>
+            </executions>
+         </plugin>
+         <plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-invoker-plugin</artifactId>
+            <version>${maven-invoker-plugin.version}</version>
+            <configuration>
+               <cloneProjectsTo>${project.build.directory}/integration-test</cloneProjectsTo>
+               <goals>
+                  <goal>org.apache.maven.plugins:maven-archetype-plugin:generate</goal>
+               </goals>
+               <localRepositoryPath>${project.build.directory}/local-repo</localRepositoryPath>
+               <pomIncludes>
+                  <pomInclude>*</pomInclude>
+               </pomIncludes>
+               <projectsDirectory>${basedir}/src/integration-test/</projectsDirectory>
+               <properties>
+                  <archetypeArtifactId>${project.artifactId}</archetypeArtifactId>
+                  <archetypeGroupId>${project.groupId}</archetypeGroupId>
+                  <archetypeVersion>${project.version}</archetypeVersion>
+                  <archetypeRepository>local</archetypeRepository>
+                  <goals>verify</goals>
+                  <interactiveMode>false</interactiveMode>
+               </properties>
+               <streamLogs>true</streamLogs>
+            </configuration>
+            <executions>
+               <execution>
+                  <id>integration-test</id>
+                  <goals>
+                     <goal>install</goal>
+                     <goal>run</goal>
                   </goals>
                </execution>
             </executions>
