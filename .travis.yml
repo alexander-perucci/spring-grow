@@ -11,10 +11,6 @@
 # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 # See the License for the specific language governing permissions and
 # limitations under the License.
-language: java
-
-install: mvn clean install
-
 sudo: false
 addons:
   apt:
@@ -28,13 +24,12 @@ jdk:
   - oraclejdk8
 before_install:
   - echo 'MAVEN_OPTS="-Xms512m -Xmx1024m -XX:+TieredCompilation -XX:TieredStopAtLevel=1"' >~/.mavenrc
-# default install is mvn install --quiet -DskipTests=true
-install: travis_wait mvn --show-version --quiet clean install
-script:
-  #invoker.streamLogs: we cannot access to log files through Travis web ui, so display everything in the console
-  - mvn --show-version clean install -Dinvoker.streamLogs=true
+install: travis_wait mvn --show-version --quiet install -DskipTests=true -Dmaven.javadoc.skip=true -B -V
+script: mvn --show-version --quiet clean install -Dinvoker.streamLogs=true
 after_failure:
-  - cat fit/core-reference/target/integration-test/movies/build.log
+  - cat /home/travis/build/alexander-perucci/spring-grow/target/rat.txt
+  - cat target/rat.txt
+  - cat target/integration-test/movies/build.log
 notifications:
   email:
     - aleale89@hotmail.it
