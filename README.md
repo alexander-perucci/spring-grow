@@ -14,7 +14,7 @@ See the License for the specific language governing permissions and
 limitations under the License.
 -->
 # Spring Grow
-=======================
+[![Build Status](https://travis-ci.org/alexander-perucci/spring-grow.svg?branch=master)](https://travis-ci.org/alexander-perucci/spring-grow)
 
 
 ## What the hank?
