@@ -1,0 +1,76 @@
+#set( $symbol_pound = '#' )
+#set( $symbol_dollar = '$' )
+#set( $symbol_escape = '\' )
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE tiles-definitions PUBLIC
+       "-//Apache Software Foundation//DTD Tiles Configuration 3.0//EN"
+       "http://tiles.apache.org/dtds/tiles-config_3_0.dtd">
+
+<tiles-definitions>
+   <definition name="standalone.login" template="/WEB-INF/views/standalone/login.jsp" />
+   <definition name="standalone.accessdenied" template="/WEB-INF/views/standalone/page_403.jsp" />
+   <definition name="standalone.resourcenotfound" template="/WEB-INF/views/standalone/page_404.jsp" />
+   <definition name="standalone.logintimeout" template="/WEB-INF/views/standalone/page_440.jsp" />
+   <definition name="standalone.uncaughtexception" template="/WEB-INF/views/standalone/page_500.jsp" />
+   
+
+   <definition name="layout" template="/WEB-INF/views/layout/layout.jsp">
+      <put-attribute name="navigation_left" value="/WEB-INF/views/layout/navigation_left.jsp" />
+      <put-attribute name="navigation_top"  value="/WEB-INF/views/layout/navigation_top.jsp" />
+      <put-attribute name="content_top" value="/WEB-INF/views/layout/content_top.jsp" />
+      <put-attribute name="footer" value="/WEB-INF/views/layout/footer.jsp" />
+   </definition>
+
+   <!-- Setting -->
+   <definition name="common.welcome" extends="layout">
+      <put-attribute name="content" value="/WEB-INF/views/common/welcome.jsp" />
+   </definition>
+     
+   <definition name="settings.account" extends="layout">
+      <put-attribute name="active" value="account"/>
+      <put-attribute name="action" value="/settings/account" />
+      <put-attribute name="content">
+         <definition template="/WEB-INF/views/settings/layout.jsp">
+            <put-attribute name="settings_content" value="/WEB-INF/views/settings/account.jsp" />
+         </definition>
+      </put-attribute>
+   </definition>
+   
+   <definition name="settings.password" extends="layout">
+      <put-attribute name="active" value="password"/>
+      <put-attribute name="action" value="/settings/password" />
+      <put-attribute name="content">
+         <definition template="/WEB-INF/views/settings/layout.jsp">
+            <put-attribute name="settings_content" value="/WEB-INF/views/settings/password.jsp" />
+         </definition>
+      </put-attribute>
+   </definition>
+   
+    <!-- Administration Users -->
+   <definition name="administration.user.list" extends="layout">
+      <put-attribute name="view_type" value="list" />
+      <put-attribute name="content" value="/WEB-INF/views/administration/user/user_list.jsp" />
+   </definition>
+   
+   <definition name="administration.user.create" extends="layout">
+      <put-attribute name="view_type" value="create" />
+      <put-attribute name="action" value="/administration/user/create" />
+      <put-attribute name="action_cancel" value="/administration/user/list" />
+      <put-attribute name="content" value="/WEB-INF/views/administration/user/user_form.jsp" />
+   </definition>
+
+   <definition name="administration.user.update" extends="layout">
+      <put-attribute name="view_type" value="update" />
+      <put-attribute name="action" value="/administration/user/update" />
+      <put-attribute name="action_cancel" value="/administration/user/list" />
+      <put-attribute name="content" value="/WEB-INF/views/administration/user/user_form.jsp" />
+   </definition>
+
+   <definition name="administration.user.delete" extends="layout">
+      <put-attribute name="view_type" value="delete" />
+      <put-attribute name="action" value="/administration/user/delete" />
+      <put-attribute name="action_cancel" value="/administration/user/list" />
+      <put-attribute name="content" value="/WEB-INF/views/administration/user/user_form.jsp" />
+   </definition>
+
+</tiles-definitions>

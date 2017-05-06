@@ -1,0 +1,531 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+   <modelVersion>4.0.0</modelVersion>
+   
+   <groupId>${groupId}</groupId>
+   <artifactId>${artifactId}</artifactId>
+   <version>${version}</version>
+   <packaging>war</packaging>
+           
+   <name>${webApplicationName}</name>
+   <description>${webApplicationName} is a secured Spring MVC Web Application</description>
+
+   <!-- FIXME: Update with the project URL   -->
+   <url>URL</url>
+   
+   <!-- FIXME: Update with the correct settings -->
+   <inceptionYear>2017</inceptionYear>
+
+   <!-- FIXME: Update with the correct settings -->
+   <organization>
+      <name>NAME</name>
+      <url>URL</url>
+   </organization>
+
+   <!-- FIXME: Update with the correct settings -->
+   <developers>
+      <developer>
+         <id>ID</id>
+         <name>NAME</name>
+         <roles>
+            <role>Developer</role>
+            <role>Architect</role>
+         </roles>
+         <email>EMAIL</email>
+      </developer>
+   </developers>
+   
+   <!-- FIXME: Update with the correct settings -->
+   <scm>
+      <connection>scm:git:git@github.com:USERNAME/REPO.git</connection>
+      <developerConnection>scm:git:git@github.com:USERNAME/REPO.git</developerConnection>
+      <url>git@github.com:USERNAME/REPO.git</url>
+      <tag>HEAD</tag>
+   </scm>
+
+   <!-- FIXME: Update with the correct settings -->
+   <ciManagement>
+      <url>ci-url</url>
+   </ciManagement>
+
+   <!-- FIXME: Update with the correct settings -->
+   <issueManagement>
+      <url>jira</url>
+   </issueManagement>
+
+   <properties>
+      <maven.compiler.source>1.8</maven.compiler.source>
+      <maven.compiler.target>1.8</maven.compiler.target>
+      <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+
+      <!-- used for build-tomcat and embedded profiles -->
+      <apache-tomcat.version>8.5.8</apache-tomcat.version>
+      <cargo.logging>low</cargo.logging>
+      <cargo.tomcat.ajp.port>9889</cargo.tomcat.ajp.port>
+      <cargo.rmi.port>9805</cargo.rmi.port>
+      <cargo.servlet.port>8090</cargo.servlet.port>
+      <apache-tomcat.server.port>8090</apache-tomcat.server.port>
+      <apache-tomcat.dir.name>apache-tomcat-${apache-tomcat.version}</apache-tomcat.dir.name>
+      <apache-tomcat.users.name>tomcat</apache-tomcat.users.name>
+      <apache-tomcat.users.password>tomcat</apache-tomcat.users.password>
+      <mysql-connector.version>5.1.40</mysql-connector.version>
+      
+      <!-- dependencies -->
+      <springframework.version>4.2.8.RELEASE</springframework.version>
+      <springframework-security.version>3.2.5.RELEASE</springframework-security.version>
+      <hibernate.version>4.3.11.Final</hibernate.version>
+      <hibernate-commons-annotations.version>4.0.5.Final</hibernate-commons-annotations.version>
+      <hibernate-jpa.version>1.0.0.Final</hibernate-jpa.version>
+      <javax.servlet.version>3.1.0</javax.servlet.version>
+      <javax.servlet.jsp.version>2.3.1</javax.servlet.jsp.version>
+      <org.apache.tiles>3.0.7</org.apache.tiles>
+      <javax.servlet.jstl.version>1.2</javax.servlet.jstl.version>
+      <slf4j.version>1.7.12</slf4j.version>
+      <slf4j-log4j12.version>1.7.12</slf4j-log4j12.version>
+      <junit.version>4.12</junit.version>
+      <commons-dbcp2.version>2.1.1</commons-dbcp2.version>
+      <commons-collections.version>3.2.2</commons-collections.version>
+      <commons-codec.version>1.10</commons-codec.version>
+      <commons-fileupload.version>1.3.2</commons-fileupload.version>
+      <jackson-databind.version>2.8.5</jackson-databind.version>
+      <imgscalr-lib.version>4.2</imgscalr-lib.version>
+      <webjars-locator.version>0.32</webjars-locator.version>
+      <webjars-gentelella.version>1.3.0</webjars-gentelella.version>
+
+      <!-- plugins -->
+      <maven-compiler-plugin.version>3.3</maven-compiler-plugin.version>
+      <maven-dependency-plugin.version>3.0.0</maven-dependency-plugin.version>
+      <maven-resources-plugin.version>3.0.2</maven-resources-plugin.version>
+      <maven-javadoc-plugin.version>2.10.4</maven-javadoc-plugin.version>
+      <maven-war-plugin.version>3.0.0</maven-war-plugin.version>
+      <cargo-maven2-plugin.version>1.6.3</cargo-maven2-plugin.version>
+   </properties>
+   
+   <dependencies>
+      <!-- Spring Framework -->
+      <dependency>
+         <groupId>org.springframework</groupId>
+         <artifactId>spring-web</artifactId>
+         <version>${springframework.version}</version>
+      </dependency>
+      <dependency>
+         <groupId>org.springframework</groupId>
+         <artifactId>spring-webmvc</artifactId>
+         <version>${springframework.version}</version>
+      </dependency>
+      <dependency>
+         <groupId>org.springframework</groupId>
+         <artifactId>spring-context</artifactId>
+         <version>${springframework.version}</version>
+         <exclusions>
+            <exclusion>
+               <groupId>commons-logging</groupId>
+               <artifactId>commons-logging</artifactId>
+            </exclusion>
+         </exclusions>
+      </dependency>
+      <!-- Spring Security Framework -->
+      <dependency>
+         <groupId>org.springframework.security</groupId>
+         <artifactId>spring-security-core</artifactId>
+         <version>${springframework-security.version}</version>
+      </dependency>
+      <dependency>
+         <groupId>org.springframework.security</groupId>
+         <artifactId>spring-security-web</artifactId>
+         <version>${springframework-security.version}</version>
+      </dependency>
+      <dependency>
+         <groupId>org.springframework.security</groupId>
+         <artifactId>spring-security-config</artifactId>
+         <version>${springframework-security.version}</version>
+      </dependency>
+      <dependency>
+         <groupId>org.springframework.security</groupId>
+         <artifactId>spring-security-taglibs</artifactId>
+         <version>${springframework-security.version}</version>
+      </dependency>
+      <!-- hibernate, jpa and spring orm -->
+      <dependency>
+         <groupId>org.hibernate</groupId>
+         <artifactId>hibernate-core</artifactId>
+         <version>${hibernate.version}</version>
+      </dependency>
+      <dependency>
+         <groupId>org.hibernate</groupId>
+         <artifactId>hibernate-entitymanager</artifactId>
+         <version>${hibernate.version}</version>
+      </dependency>
+      <dependency>
+         <groupId>org.hibernate.common</groupId>
+         <artifactId>hibernate-commons-annotations</artifactId>
+         <version>${hibernate-commons-annotations.version}</version>
+      </dependency>
+      <dependency>
+         <groupId>org.hibernate.javax.persistence</groupId>
+         <artifactId>hibernate-jpa-2.1-api</artifactId>
+         <version>${hibernate-jpa.version}</version>
+      </dependency>
+      <dependency>
+         <groupId>org.springframework</groupId>
+         <artifactId>spring-orm</artifactId>
+         <version>${springframework.version}</version>
+      </dependency>
+      <!-- Servlet, JSP, JSTL -->
+      <dependency>
+         <groupId>javax.servlet</groupId>
+         <artifactId>javax.servlet-api</artifactId>
+         <version>${javax.servlet.version}</version>
+      </dependency>
+      <dependency>
+         <groupId>javax.servlet.jsp</groupId>
+         <artifactId>javax.servlet.jsp-api</artifactId>
+         <version>${javax.servlet.jsp.version}</version>
+      </dependency>
+      <dependency>
+         <groupId>javax.servlet</groupId>
+         <artifactId>jstl</artifactId>
+         <version>${javax.servlet.jstl.version}</version>
+      </dependency>
+      <!-- Apache Tiles -->
+      <dependency>
+         <groupId>org.apache.tiles</groupId>
+         <artifactId>tiles-servlet</artifactId>
+         <version>${org.apache.tiles}</version>
+      </dependency>
+      <dependency>
+         <groupId>org.apache.tiles</groupId>
+         <artifactId>tiles-jsp</artifactId>
+         <version>${org.apache.tiles}</version>
+      </dependency>
+      <!-- Logs -->
+      <dependency>
+         <groupId>org.slf4j</groupId>
+         <artifactId>slf4j-api</artifactId>
+         <version>${slf4j.version}</version>
+      </dependency>
+      <dependency>
+         <groupId>org.slf4j</groupId>
+         <artifactId>slf4j-log4j12</artifactId>
+         <version>${slf4j-log4j12.version}</version>
+      </dependency>
+
+      <!-- mysql -->
+      <dependency>
+         <groupId>mysql</groupId>
+         <artifactId>mysql-connector-java</artifactId>
+         <version>${mysql-connector.version}</version>
+      </dependency>
+      <!-- Extra -->
+      <!-- Many Apache projects support interaction with a relational database -->
+      <dependency>
+            <groupId>org.apache.commons</groupId>
+            <artifactId>commons-dbcp2</artifactId>
+            <version>${commons-dbcp2.version}</version>
+            <exclusions>
+                <exclusion>
+                    <groupId>commons-logging</groupId>
+                    <artifactId>commons-logging</artifactId>
+                </exclusion>
+                <exclusion>
+                    <groupId>xml-apis</groupId>
+                    <artifactId>xml-apis</artifactId>
+                </exclusion>
+            </exclusions>
+        </dependency>
+      <!-- Apache Commons Collections seek to build upon the JDK classes by 
+         providing new interfaces, implementations and utilities
+         https://mvnrepository.com/artifact/commons-collections/commons-collections -->
+      <dependency>
+         <groupId>commons-collections</groupId>
+         <artifactId>commons-collections</artifactId>
+         <version>${commons-collections.version}</version>
+      </dependency>            
+      <!-- Apache Commons Codec package contains simple encoder and decoders 
+         for various formats such as Base64 and Hexadecimal. In addition to these 
+         widely used encoders and decoders, the codec package also maintains a collection 
+         of phonetic encoding utilities.
+         https://mvnrepository.com/artifact/commons-codec/commons-codec -->
+      <dependency>
+         <groupId>commons-codec</groupId>
+         <artifactId>commons-codec</artifactId>
+         <version>${commons-codec.version}</version>
+      </dependency>
+      <!-- Apache Commons FileUpload component provides a simple yet flexible 
+         means of adding support for multipart file upload functionality to servlets 
+         and web applications. 
+         Used for org.springframework.web.multipart.commons.CommonsMultipartResolver 
+         https://mvnrepository.com/artifact/commons-fileupload/commons-fileupload -->
+      <dependency>
+         <groupId>commons-fileupload</groupId>
+         <artifactId>commons-fileupload</artifactId>
+         <version>${commons-fileupload.version}</version>
+      </dependency>
+      <!-- General data-binding functionality for Jackson: works on core streaming API.
+         Used for return JSON data from spring Controller using @ResponseBody 
+         https://mvnrepository.com/artifact/com.fasterxml.jackson.core/jackson-databind -->
+      <dependency>
+         <groupId>com.fasterxml.jackson.core</groupId>
+         <artifactId>jackson-databind</artifactId>
+         <version>${jackson-databind.version}</version>
+      </dependency>
+      <!-- Imgscalr is an simple and efficient best-practices image-scaling and manipulation library implemented in pure Java.
+      Used for manipulate the user avatar.
+      https://mvnrepository.com/artifact/org.imgscalr/imgscalr-lib -->
+      <dependency>
+          <groupId>org.imgscalr</groupId>
+          <artifactId>imgscalr-lib</artifactId>
+          <version>${imgscalr-lib.version}</version>
+      </dependency>
+   
+      <!-- WebJar -->
+      <!-- Spring Framework version 4.2 or higher, it will automatically detect 
+      the webjars-locator library on the classpath and use it to automatically 
+      resolve the version of any WebJar assets.
+      https://mvnrepository.com/artifact/org.webjars/webjars-locator -->
+      <dependency>
+         <groupId>org.webjars</groupId>
+         <artifactId>webjars-locator</artifactId>
+         <version>${webjars-locator.version}</version>
+      </dependency>
+      <!-- Gentelella theme
+      https://mvnrepository.com/artifact/org.webjars.bower/gentelella -->
+      <dependency>
+         <groupId>org.webjars.bower</groupId>
+         <artifactId>gentelella</artifactId>
+         <version>${webjars-gentelella.version}</version>
+      </dependency>
+
+      <!-- Test -->
+      <dependency>
+         <groupId>junit</groupId>
+         <artifactId>junit</artifactId>
+         <version>${junit.version}</version>
+         <scope>test</scope>
+      </dependency>
+
+   </dependencies>
+   
+   <profiles>
+      <!-- Profile to generate a Tomcat Server -->
+      <!-- Start command: mvn -Pbuild-tomcat -->
+      <!-- Available at:  ${project.build.directory}/${apache-tomcat.dir.name}.zip -->
+      <profile>
+         <id>build-tomcat</id>
+         <activation>
+            <activeByDefault>false</activeByDefault>
+         </activation>
+         <build>
+            <defaultGoal>clean verify</defaultGoal>
+            <plugins>
+               <plugin>
+                  <groupId>org.apache.maven.plugins</groupId>
+                  <artifactId>maven-dependency-plugin</artifactId>
+                  <version>${maven-dependency-plugin.version}</version>
+                  <executions>
+                     <execution>
+                        <id>download-tomcat</id>
+                        <phase>package</phase>
+                        <goals>
+                           <goal>unpack</goal>
+                        </goals>
+                        <configuration>
+                           <artifactItems>
+                              <!-- see http://repo1.maven.org/maven2/org/apache/tomcat/tomcat/ -->
+                              <artifactItem>
+                                 <groupId>org.apache.tomcat</groupId>
+                                 <artifactId>tomcat</artifactId>
+                                 <version>${apache-tomcat.version}</version>
+                                 <type>zip</type>
+                                 <overWrite>true</overWrite>
+                                 <outputDirectory>${project.build.directory}</outputDirectory>
+                              </artifactItem>
+                           </artifactItems>
+                        </configuration>
+                     </execution>
+                     <execution>
+                        <id>download-mysql-connector</id>
+                        <phase>package</phase>
+                        <goals>
+                           <goal>copy</goal>
+                        </goals>
+                        <configuration>
+                           <artifactItems>
+                              <!-- see https://mvnrepository.com/artifact/mysql/mysql-connector-java/ -->
+                              <artifactItem>
+                                 <groupId>mysql</groupId>
+                                 <artifactId>mysql-connector-java</artifactId>
+                                 <type>jar</type>
+                                 <overWrite>true</overWrite>
+                                 <outputDirectory>${project.build.directory}/${apache-tomcat.dir.name}/lib</outputDirectory>
+                              </artifactItem>
+                           </artifactItems>
+                        </configuration>
+                     </execution>
+                  </executions>
+               </plugin>
+               <plugin>
+                  <groupId>org.apache.maven.plugins</groupId>
+                  <artifactId>maven-resources-plugin</artifactId>
+                  <version>${maven-resources-plugin.version}</version>
+                  <executions>
+                     <execution>
+                        <id>copy-server.xml</id>
+                        <phase>package</phase>
+                        <goals>
+                           <goal>copy-resources</goal>
+                        </goals>
+                        <configuration>
+                           <outputDirectory>${project.build.directory}/${apache-tomcat.dir.name}/conf</outputDirectory>
+                           <resources>
+                              <resource>
+                                 <filtering>true</filtering>
+                                 <directory>src/main/assembly/resources</directory>
+                                 <includes>
+                                    <include>server.xml</include>
+                                 </includes>
+                              </resource>
+                           </resources>
+                        </configuration>
+                     </execution>
+                     <execution>
+                        <id>copy-tomcat-users.xml</id>
+                        <phase>package</phase>
+                        <goals>
+                           <goal>copy-resources</goal>
+                        </goals>
+                        <configuration>
+                           <outputDirectory>${project.build.directory}/${apache-tomcat.dir.name}/conf</outputDirectory>
+                           <resources>
+                              <resource>
+                                 <filtering>true</filtering>
+                                 <directory>src/main/assembly/resources</directory>
+                                 <includes>
+                                    <include>tomcat-users.xml</include>
+                                 </includes>
+                              </resource>
+                           </resources>
+                        </configuration>
+                     </execution>
+                  </executions>
+               </plugin>
+               <plugin>
+                  <groupId>org.apache.maven.plugins</groupId>
+                  <artifactId>maven-assembly-plugin</artifactId>
+                  <inherited>true</inherited>
+                  <executions>
+                     <execution>
+                        <phase>package</phase>
+                        <goals>
+                           <goal>single</goal>
+                        </goals>
+                        <configuration>
+                           <appendAssemblyId>false</appendAssemblyId>
+                           <descriptors>
+                              <descriptor>src/main/assembly/build-tomcat.xml</descriptor>
+                           </descriptors>
+                        </configuration>
+                     </execution>
+                  </executions>
+               </plugin>
+            </plugins>
+         </build>
+      </profile>
+      
+      <!-- Profile to run an embedded Tomcat Server -->
+      <!-- Start command: mvn -Pembedded -->
+      <!-- Available at:  http://localhost:${cargo.servlet.port}/${project.artifactId} -->
+      <profile>
+         <id>embedded</id>
+         <activation>
+            <activeByDefault>false</activeByDefault>
+         </activation>
+         <build>
+            <defaultGoal>clean verify cargo:run</defaultGoal>
+            <plugins>
+               <plugin>
+                  <groupId>org.codehaus.cargo</groupId>
+                  <artifactId>cargo-maven2-plugin</artifactId>
+                  <version>${cargo-maven2-plugin.version}</version>
+                  <configuration>
+                     <container>
+                        <containerId>tomcat8x</containerId>
+                        <artifactInstaller>
+                           <groupId>org.apache.tomcat</groupId>
+                           <artifactId>tomcat</artifactId>
+                           <version>${apache-tomcat.version}</version>
+                        </artifactInstaller>
+                        <dependencies>
+                           <dependency>
+                              <groupId>mysql</groupId>
+                              <artifactId>mysql-connector-java</artifactId>
+                           </dependency>
+                        </dependencies>
+                     </container>
+                     <configuration>
+                        <type>standalone</type>
+                        <properties>
+                           <cargo.servlet.port>${cargo.servlet.port}</cargo.servlet.port>
+                           <cargo.tomcat.ajp.port>${cargo.tomcat.ajp.port}</cargo.tomcat.ajp.port>
+                           <cargo.rmi.port>${cargo.rmi.port}</cargo.rmi.port>
+                           <cargo.logging>${cargo.logging}</cargo.logging>
+                           <cargo.jvmargs>-noverify -XX:+CMSClassUnloadingEnabled -XX:+UseConcMarkSweepGC</cargo.jvmargs>
+                        </properties>
+                     </configuration>
+                     <deployables>
+                        <deployable>
+                           <location>${project.build.directory}/${project.artifactId}.war</location>
+                           <type>war</type>
+                           <properties>
+                              <context>/${project.artifactId}</context>
+                           </properties>
+                        </deployable>
+                     </deployables>
+                  </configuration>
+               </plugin>
+            </plugins>
+         </build>
+      </profile>
+   </profiles>
+   
+   <build>
+      <plugins>
+         <plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-compiler-plugin</artifactId>
+            <version>${maven-compiler-plugin.version}</version>
+            <configuration>
+               <source>${maven.compiler.source}</source>
+               <target>${maven.compiler.target}</target>
+               <showWarnings>true</showWarnings>
+               <showDeprecation>true</showDeprecation>
+               <compilerArgument>-Xlint:unchecked</compilerArgument>
+            </configuration>
+         </plugin>
+         <plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-javadoc-plugin</artifactId>
+            <version>${maven-javadoc-plugin.version}</version>
+            <executions>
+               <execution>
+                  <id>attach-javadocs</id>
+                  <goals>
+                     <goal>jar</goal>
+                  </goals>
+               </execution>
+            </executions>
+         </plugin>
+         <plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-war-plugin</artifactId>
+            <version>${maven-war-plugin.version}</version>
+            <configuration>
+               <failOnMissingWebXml>false</failOnMissingWebXml>
+               <webappDirectory>${project.build.directory}/webapp</webappDirectory>
+               <warName>${project.artifactId}</warName>
+            </configuration>
+         </plugin>
+      </plugins>
+   </build>
+</project>
+

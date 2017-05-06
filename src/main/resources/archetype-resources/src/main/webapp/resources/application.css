@@ -1,0 +1,300 @@
+/*===== START login =====*/
+
+/* used for add new page in the login*/
+.signin_form,
+.signup_form, 
+.forgot_form {
+   position: absolute;
+   top: 0px;
+   width: 100%
+}
+
+.signin_form {
+   z-index: 22
+}
+
+.signup_form,
+.forgot_form {
+   z-index: 21;
+   opacity: 0;
+   width: 100%
+}
+
+#signin:target ~ .login_wrapper .signin_form,
+#signup:target ~ .login_wrapper .signup_form,
+#forgot:target ~ .login_wrapper .forgot_form {
+   z-index: 22;
+   animation-name: fadeInLeft;
+   animation-delay: .1s
+}
+
+
+#signin:target ~ .login_wrapper .signup_form,
+#signup:target ~ .login_wrapper .signin_form, 
+#forgot:target ~ .login_wrapper .signin_form {
+   animation-name: fadeOutLeft
+}
+
+/* fix parsley */
+.login_content form ul.parsley-errors-list {
+   text-align: left;
+   margin-top: -20px !important;
+}
+
+.login_content form ul.parsley-errors-list:empty {
+   margin-top: 0px !important;
+}
+
+.login_content form div a {
+   margin: 0px !important;
+}
+
+/*===== END login =====*/
+
+/*===== START common =====*/
+
+.margin_top_20 {
+   margin-top: 20px !important;
+}
+
+.margin_bottom_20 {
+   margin-bottom: 20px !important;
+}
+
+.text-align-right{
+   text-align: right;
+}
+
+.text-align-left{
+   text-align: left;
+}
+
+.float-left{
+   float: left;
+}
+
+/* navbar-right panel_toolbox remove margin right when icons are < 3 */
+ul.nav.navbar-right.panel_toolbox {
+   min-width: 0px;
+}
+
+/* seems that the height of the footer must be increased*/
+footer {
+   height: 51px;
+}
+
+/* change <i> padding in left-panel */
+.site_title i {
+   padding: 6px;
+}
+/* fix select2 width  */
+span.select2.select2-container.select2-container--default {
+   width: 100% !important;
+}
+
+/* gif loader for ajax input check*/
+input#username.show-spinner, input.show-spinner {
+   background-image: url("images/loader_gray_32.gif");
+   background-size: 20px 20px;
+   background-position: right 10px center !important;
+   background-repeat: no-repeat;
+   padding-right: 40px;
+}
+
+/* parsley */
+input.parsley-error, select.parsley-error, textarea.parsley-error, span.parsley-error
+   {
+   background-color: #FAEDEC !important;
+   border: 1px solid #E85445 !important;
+}
+
+input#username.parsley-success.custom-parsley-success, input.parsley-success.custom-parsley-success,
+   select.parsley-success.custom-parsley-success, textarea.parsley-success.custom-parsley-success,
+   span.parsley-success.custom-parsley-success {
+   background-image: url("images/check-ok.png");
+   background-size: 20px 15px;
+   background-position: right 10px center !important;
+   background-repeat: no-repeat;
+   padding-right: 40px;
+}
+/*===== END common =====*/
+
+/*===== START administration =====*/
+
+/* search input box in dataTables, page:administration.user.list */
+table.table-bordered.dataTable tfoot tr th input {
+   width: 100%;
+   margin-left: 0;
+   text-align: center;
+}
+
+/*===== END administration =====*/
+
+/*===== START navigation_left =====*/
+.avatar_navigation_left {
+   width: 70px;
+   height: 70px;
+   margin-left: 15%;
+   z-index: 1000;
+   position: inherit;
+   margin-top: 20px;
+   border-radius: 50%;
+}
+/*===== END navigation_left =====*/
+
+/*===== START settings =====*/
+.avatar-view {
+   max-height: 200px;
+   max-width: 200px;
+   display: block;
+   position: relative;
+   margin-left: 25%;
+   height: 200px;
+   width: 200px;
+   border: 3px solid #fff;
+   border-radius: 5px;
+   box-shadow: 0 0 5px rgba(0, 0, 0, .15);
+   cursor: pointer;
+   overflow: hidden;
+}
+
+.avatar-view img {
+   width: 100%;
+   height: 100%;
+}
+
+.avatar-view:hover #avatarTooltip {
+   display: block;
+}
+
+#avatarTooltip {
+   position: absolute;
+   float: left;
+   left: 0px;
+   bottom: 0px;
+   right: 0px;
+   padding-left: 5px;
+   padding-right: 5px;
+   padding-top: 10px;
+   padding-bottom: 10px;
+   color: #FFFFFF;
+   font-weight: bold;
+   display: none;
+   background: rgba(0, 0, 0, .6) 100%;
+   transition: top .13s ease-out;
+}
+
+#avatarTooltipContent {
+   display: table-row;
+}
+
+#avatarTooltipContentIcon {
+   font-size: 20px;
+   display: table-cell;
+   vertical-align: middle;
+   padding-left: 10px;
+}
+
+#avatarTooltipContentDescription {
+   display: table-cell;
+   vertical-align: middle;
+   padding-left: 15px;
+}
+
+#avatarTooltip:hover {
+   background: black;
+}
+
+/*===== END settings =====*/
+
+/*===== START modal =====*/
+.avatar-body {
+   padding-right: 15px;
+   padding-left: 15px;
+}
+
+.avatar-upload {
+   overflow: hidden;
+}
+
+.avatar-upload label {
+   display: block;
+   float: left;
+   clear: left;
+   width: 100px;
+}
+
+.avatar-upload input {
+   display: block;
+}
+
+.avatar-wrapper {
+   height: 364px;
+   width: 100%;
+   margin-top: 15px;
+   box-shadow: inset 0 0 5px rgba(0, 0, 0, .25);
+   background-color: #fcfcfc;
+   overflow: hidden;
+}
+
+.avatar-wrapper img {
+   display: block;
+   height: auto;
+   max-width: 100%;
+}
+
+.avatar-preview {
+   float: left;
+   margin-top: 15px;
+   margin-right: 15px;
+   border: 1px solid #eee;
+   border-radius: 4px;
+   background-color: #fff;
+   overflow: hidden;
+}
+
+.avatar-preview:hover {
+   border-color: #ccf;
+   box-shadow: 0 0 5px rgba(0, 0, 0, .15);
+}
+
+.avatar-preview img {
+   width: 100%;
+   height: 100%;
+}
+
+.preview-lg {
+   max-height: 200px;
+   max-width: 200px;
+   margin-top: 15px;
+}
+
+.preview-md {
+   height: 100px;
+   width: 100px;
+}
+
+.preview-sm {
+   height: 50px;
+   width: 50px;
+}
+
+@media ( min-width : 992px) {
+   .avatar-preview {
+      float: none;
+   }
+}
+
+.avatar-btns {
+   margin-top: 15px;
+   margin-bottom: 15px;
+}
+
+.avatar-btns .btn-group {
+   margin-right: 5px;
+}
+
+body.nav-md.modal-open {
+   padding-right: 0px !important;
+}
+/*===== END modal =====*/

@@ -1,0 +1,78 @@
+#set( $symbol_pound = '#' )
+#set( $symbol_dollar = '$' )
+#set( $symbol_escape = '\' )
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+   xmlns="http://www.springframework.org/schema/beans" xmlns:util="http://www.springframework.org/schema/util"
+   xmlns:context="http://www.springframework.org/schema/context"
+   xmlns:tx="http://www.springframework.org/schema/tx"
+  
+   xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+           http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util.xsd
+           http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd
+           http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx.xsd">
+
+   <!--  
+        This will automatically locate application property file you have
+        within your classpath. The located property file is parsed and their values can
+        then be used within application context files in the form of
+        @Value("${symbol_dollar}{appconfig_properties.propertyKey}").
+   -->
+   <util:properties id="appconfig_properties" location="classpath:appconfig.properties" />
+  
+   <!--  
+        This will automatically locate database property file you have
+        within your classpath. The located property file is parsed and their values can
+        then be used within application context files in the form of
+        ${symbol_dollar}{propertyKey}.
+    -->
+   <context:property-placeholder location="classpath:jdbc.properties"/>
+   
+   <!--
+        This declaration will cause Spring to locate every @Component,
+        @Repository and @Service in your application. In practical terms this
+        allows you to write a POJO and then simply annotate the new POJO as an
+        @Service and Spring will automatically detect, instantiate and
+        dependency inject your service at startup time. Importantly, you can
+        then also have your new service injected into any other class that
+        requires it simply by declaring a field for your service inside the
+        relying class and Spring will inject it.  Note that the exclude filter
+        ensures @Controller classes are not instantiate.
+        
+        Furthermore, this turns on @Autowired, @PostConstruct etc support. These 
+        annotations allow you to use common Spring and Java Enterprise Edition 
+        annotations in your classes without needing to do any special configuration. 
+        The most commonly used annotation is @Autowired, which instructs Spring to
+        dependency inject an object into your class.
+    -->
+   <context:component-scan base-package="${package}">
+        <context:exclude-filter expression="org.springframework.stereotype.Controller" type="annotation"/>
+   </context:component-scan>
+
+   <bean id="dataSource" class="org.apache.commons.dbcp2.BasicDataSource" destroy-method="close">
+        <property name="driverClassName" value="${symbol_dollar}{jdbc.driverClassName}"/>
+        <property name="url" value="${symbol_dollar}{jdbc.url}"/>
+        <property name="username" value="${symbol_dollar}{jdbc.username}"/>
+        <property name="password" value="${symbol_dollar}{jdbc.password}"/>
+        <property name="testOnBorrow" value="true"/>
+        <property name="testOnReturn" value="true"/>
+        <property name="testWhileIdle" value="true"/>
+        <property name="timeBetweenEvictionRunsMillis" value="1800000"/>
+        <property name="numTestsPerEvictionRun" value="3"/>
+        <property name="minEvictableIdleTimeMillis" value="1800000"/>
+        <property name="validationQuery" value="SELECT 1"/>
+    </bean>
+
+   <bean id="entityManagerFactory"
+      class="org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean">
+      <property name="dataSource" ref="dataSource" />
+      <property name="persistenceUnitName" value="persistenceUnit" />
+   </bean>
+
+   <!-- Transaction Manager -->
+   <bean id="transactionManager" class="org.springframework.orm.jpa.JpaTransactionManager">
+      <property name="entityManagerFactory" ref="entityManagerFactory" />
+   </bean>
+   <tx:annotation-driven transaction-manager="transactionManager" />
+   
+</beans>

@@ -1,0 +1,42 @@
+#set( $symbol_pound = '#' )
+#set( $symbol_dollar = '$' )
+#set( $symbol_escape = '\' )
+<?xml version="1.0" encoding="UTF-8"?>
+<assembly
+   xmlns="http://maven.apache.org/plugins/maven-assembly-plugin/assembly/1.1.3"
+   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+   xsi:schemaLocation="http://maven.apache.org/plugins/maven-assembly-plugin/assembly/1.1.3
+                              http://maven.apache.org/xsd/assembly-1.1.3.xsd">
+
+   <id>build-tomcat</id>
+
+   <formats>
+      <format>zip</format>
+   </formats>
+
+   <fileSets>
+      <fileSet>
+         <useDefaultExcludes>false</useDefaultExcludes>
+         <directory>${symbol_dollar}{project.build.directory}/${symbol_dollar}{apache-tomcat.dir.name}</directory>
+         <includes>
+            <include>**</include>
+         </includes>
+         <outputDirectory></outputDirectory>
+         <!--
+         <excludes>
+            <exclude>**/webapps/docs/**</exclude>
+            <exclude>**/webapps/examples/**</exclude>
+            <exclude>**/webapps/host-manager/**</exclude>
+            <exclude>**/webapps/manager/**</exclude>
+         </excludes>
+         -->
+      </fileSet>
+      <fileSet>
+         <directory>${symbol_dollar}{project.build.directory}</directory>
+         <includes>
+            <include>${symbol_dollar}{project.artifactId}.war</include>
+         </includes>
+         <outputDirectory>webapps</outputDirectory>
+      </fileSet>
+   </fileSets>
+</assembly>
