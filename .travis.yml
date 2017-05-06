@@ -12,10 +12,6 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 sudo: false
-addons:
-  apt:
-    packages:
-      - oracle-java8-installer
 cache:
   directories:
   - $HOME/.m2
@@ -24,10 +20,14 @@ jdk:
   - oraclejdk8
 before_install:
   - echo 'MAVEN_OPTS="-Xms512m -Xmx1024m -XX:+TieredCompilation -XX:TieredStopAtLevel=1"' >~/.mavenrc
-install: travis_wait mvn --show-version --quiet install -DskipTests=true -Dmaven.javadoc.skip=true -B -V
-script: mvn --show-version --quiet clean install -Dinvoker.streamLogs=true
+install:
+  - mvn --show-version --batch-mode validate dependency:go-offline
+script:
+  - mvn --show-version --batch-mode clean verify -Dittest.debug=false -Dinvoker.streamLogs=true
 after_failure:
-  - cat /home/travis/build/alexander-perucci/spring-grow/target/rat.txt
+  - cat target/rat.txt
+  - cat target/integration-test/movies/build.log
+after_failure:
   - cat target/rat.txt
   - cat target/integration-test/movies/build.log
 notifications:
