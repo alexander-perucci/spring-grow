@@ -71,7 +71,7 @@ Building a Tomcat bundle is also very simple, you just have to run `mvn -Pbuild-
 
 ## What features are already implemented?
 
-For now, the template of the secured Spring MVC web application manage an authenticated user from administrator and generic user point of view.
+For now, the template of the secured Spring MVC web application manage an authenticated user from administrator to generic user point of view.
 
 __Functional features for generic users:__
 
