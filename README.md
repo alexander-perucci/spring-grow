@@ -14,7 +14,7 @@ See the License for the specific language governing permissions and
 limitations under the License.
 -->
 # Spring Grow
-[![Build Status](https://travis-ci.org/alexander-perucci/spring-grow.svg?branch=master)](https://travis-ci.org/alexander-perucci/spring-grow) [![Maven Central](https://maven-badges.herokuapp.com/maven-central/com.alexanderperucci/spring-grow/badge.svg?style=plastic)](https://maven-badges.herokuapp.com/maven-central/com.alexanderperucci/spring-grow)
+[![Build Status](https://travis-ci.org/alexander-perucci/spring-grow.svg?branch=master)](https://travis-ci.org/alexander-perucci/spring-grow) [![Maven Central](https://maven-badges.herokuapp.com/maven-central/com.alexanderperucci/spring-grow/badge.svg)](https://maven-badges.herokuapp.com/maven-central/com.alexanderperucci/spring-grow)
 
 
 ## What the hank?
