@@ -53,7 +53,6 @@ limitations under the License.
       <connection>scm:git:git@github.com:alexander-perucci/spring-grow.git</connection>
       <developerConnection>scm:git:git@github.com:alexander-perucci/spring-grow.git</developerConnection>
       <url>git@github.com:alexander-perucci/spring-grow.git</url>
-      <tag>spring-grow-1.0.0</tag>
    </scm>
 
    <issueManagement>
