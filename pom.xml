@@ -26,21 +26,6 @@ limitations under the License.
    <description>Maven Archetype which can generate a secured Spring MVC Web Application (XML Configuration)</description>
    <url>https://github.com/alexander-perucci/spring-grow</url>
    
-   <properties>
-      <maven.compiler.source>1.8</maven.compiler.source>
-      <maven.compiler.target>1.8</maven.compiler.target>
-      <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-      <!-- plugins -->
-      <maven-javadoc-plugin.version>2.10.4</maven-javadoc-plugin.version>
-      <maven-source-plugin.version>3.0.1</maven-source-plugin.version>
-      <license-maven-plugin.version>3.0</license-maven-plugin.version>
-      <apache-rat-plugin.version>0.12</apache-rat-plugin.version>
-      <maven-invoker-plugin.version>2.0.0</maven-invoker-plugin.version>
-      <maven-release-plugin.version>2.5.3</maven-release-plugin.version>
-      <maven-deploy-plugin.version>2.8.2</maven-deploy-plugin.version>
-      <maven-gpg-plugin.version>1.6</maven-gpg-plugin.version>
-   </properties>
-
    <licenses>
       <license>
          <name>The Apache Software License, Version 2.0</name>
@@ -48,6 +33,13 @@ limitations under the License.
          <distribution>repo</distribution>
       </license>
    </licenses>
+
+   <organization>
+      <name>Alexander Perucci</name>
+      <url>http://www.alexanderperucci.com/</url>
+   </organization>
+
+   <inceptionYear>2017</inceptionYear>
 
    <scm>
       <connection>scm:git:git@github.com:alexander-perucci/spring-grow.git</connection>
@@ -86,31 +78,76 @@ limitations under the License.
       </developer>
    </developers>
 
+   <properties>
+      <maven.compiler.source>1.8</maven.compiler.source>
+      <maven.compiler.target>1.8</maven.compiler.target>
+      <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+      <!-- plugins -->
+      <maven-resources-plugin.version>3.0.2</maven-resources-plugin.version>
+      <apache-rat-plugin.version>0.12</apache-rat-plugin.version>
+      <maven-invoker-plugin.version>2.0.0</maven-invoker-plugin.version>
+      <maven-release-plugin.version>2.5.3</maven-release-plugin.version>
+      <maven-source-plugin.version>3.0.1</maven-source-plugin.version>
+      <maven-javadoc-plugin.version>2.10.4</maven-javadoc-plugin.version>
+      <maven-gpg-plugin.version>1.6</maven-gpg-plugin.version>
+      <maven-deploy-plugin.version>2.8.2</maven-deploy-plugin.version>
+   </properties>
+
    <build>
       <plugins>
+         <!-- Put NOTICE and LICENSE files in all artifacts and javadocs -->
         <plugin>
             <groupId>org.apache.maven.plugins</groupId>
-            <artifactId>maven-compiler-plugin</artifactId>
-            <version>3.3</version>
-            <configuration>
-               <source>${maven.compiler.source}</source>
-               <target>${maven.compiler.target}</target>
-               <useIncrementalCompilation>false</useIncrementalCompilation>
-               <showWarnings>true</showWarnings>
-               <showDeprecation>true</showDeprecation>
-               <compilerArgument>-Xlint:unchecked</compilerArgument>
-            </configuration>
-         </plugin>
-         <!-- Disable default license check and enforce specific -->
-         <plugin>
-            <groupId>com.mycila</groupId>
-            <artifactId>license-maven-plugin</artifactId>
-            <version>${license-maven-plugin.version}</version>
-            <inherited>true</inherited>
-            <configuration>
-               <skip>true</skip>
-            </configuration>
-         </plugin>
+            <artifactId>maven-resources-plugin</artifactId>
+            <version>${maven-resources-plugin.version}</version>
+            <executions>
+               <execution>
+                  <id>copy-artifact-legal-files</id>
+                  <phase>process-resources</phase>
+                  <goals>
+                     <goal>copy-resources</goal>
+                  </goals>
+                  <configuration>
+                     <outputDirectory>${project.build.directory}/classes/META-INF</outputDirectory>
+                     <resources>
+                        <resource>
+                           <directory>${basedir}</directory>
+                           <includes>
+                              <include>LICENSE</include>
+                              <include>NOTICE</include>
+                           </includes>
+                        </resource>
+                     </resources>
+                  </configuration>
+               </execution>
+               <execution>
+                  <id>copy-javadoc-legal-files</id>
+                  <phase>process-resources</phase>
+                  <goals>
+                     <goal>copy-resources</goal>
+                  </goals>
+                  <configuration>
+                     <outputDirectory>${project.build.directory}/apidocs/META-INF</outputDirectory>
+                     <resources>
+                        <resource>
+                           <directory>${basedir}</directory>
+                           <includes>
+                              <include>LICENSE</include>
+                              <include>NOTICE</include>
+                           </includes>
+                        </resource>
+                     </resources>
+                  </configuration>
+               </execution>
+            </executions>
+         </plugin> 
+         <!--
+            This plugin may be used to run Rat, the Release Audit Tool.
+            It verifies, whether your source code matches standards like 
+            the ASF Source Header and Copyright Notice Policy. The following goals are available:
+            apache-rat:check Runs Rat and creates a report, which is written to a plain text file.
+            apache-rat:rat Runs Rat and creates a report, which will be added to the generated site.
+         -->
          <plugin>
             <groupId>org.apache.rat</groupId>
             <artifactId>apache-rat-plugin</artifactId>
@@ -186,22 +223,16 @@ limitations under the License.
       <profile>
          <id>release</id>
          <build>
-            <plugins>      
+            <plugins>
                <plugin>
                   <groupId>org.apache.maven.plugins</groupId>
-                  <artifactId>maven-deploy-plugin</artifactId>
-                  <version>${maven-deploy-plugin.version}</version>
-               </plugin>
-               <plugin>
-                  <groupId>org.apache.maven.plugins</groupId>
-                  <artifactId>maven-gpg-plugin</artifactId>
-                  <version>${maven-gpg-plugin.version}</version>
+                  <artifactId>maven-source-plugin</artifactId>
+                  <version>${maven-source-plugin.version}</version>
                   <executions>
                      <execution>
-                        <id>sign-artifacts</id>
-                        <phase>verify</phase>
+                        <id>attach-sources</id>
                         <goals>
-                           <goal>sign</goal>
+                           <goal>jar-no-fork</goal>
                         </goals>
                      </execution>
                   </executions>
@@ -221,17 +252,23 @@ limitations under the License.
                </plugin>
                <plugin>
                   <groupId>org.apache.maven.plugins</groupId>
-                  <artifactId>maven-source-plugin</artifactId>
-                  <version>${maven-source-plugin.version}</version>
+                  <artifactId>maven-gpg-plugin</artifactId>
+                  <version>${maven-gpg-plugin.version}</version>
                   <executions>
                      <execution>
-                        <id>attach-sources</id>
+                        <id>sign-artifacts</id>
+                        <phase>verify</phase>
                         <goals>
-                           <goal>jar-no-fork</goal>
+                           <goal>sign</goal>
                         </goals>
                      </execution>
                   </executions>
-               </plugin>          
+               </plugin>
+               <plugin>
+                  <groupId>org.apache.maven.plugins</groupId>
+                  <artifactId>maven-deploy-plugin</artifactId>
+                  <version>${maven-deploy-plugin.version}</version>
+               </plugin>
             </plugins>
          </build>
       </profile>
