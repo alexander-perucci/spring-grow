@@ -1,4 +1,3 @@
-<?xml version="1.0" encoding="UTF-8"?>
 <!--
 Copyright 2017 Alexander Perucci
 
@@ -14,45 +13,40 @@ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 See the License for the specific language governing permissions and
 limitations under the License.
 -->
-<project xmlns="http://maven.apache.org/DECORATION/1.3.0"
-         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-         xsi:schemaLocation="http://maven.apache.org/DECORATION/1.3.0 http://maven.apache.org/xsd/decoration-1.3.0.xsd"
-         name="${project.artifactId}">
-    
-    <bannerLeft>
-        <name>Spring Grow</name>
-    </bannerLeft>
+<project xmlns="http://maven.apache.org/DECORATION/1.3.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/DECORATION/1.3.0 http://maven.apache.org/xsd/decoration-1.3.0.xsd" name="${project.artifactId}">
+   <bannerLeft>
+      <name>Spring Grow</name>
+   </bannerLeft>
 
-    <skin>
-        <groupId>org.apache.maven.skins</groupId>
-        <artifactId>maven-fluido-skin</artifactId>
-        <version>1.6</version>
-    </skin>
+   <skin>
+      <groupId>org.apache.maven.skins</groupId>
+      <artifactId>maven-fluido-skin</artifactId>
+      <version>1.6</version>
+   </skin>
 
-    <custom>
-        <fluidoSkin>
-            <sideBarEnabled>true</sideBarEnabled>
-            <sourceLineNumbersEnabled>true</sourceLineNumbersEnabled>
-            <gitHub>
-                <projectId>alexander-perucci/spring-grow</projectId>
-                <ribbonOrientation>right</ribbonOrientation>
-                <ribbonColor>gray</ribbonColor>
-            </gitHub>
-        </fluidoSkin>
-    </custom>
+   <custom>
+      <fluidoSkin>
+         <sideBarEnabled>true</sideBarEnabled>
+         <sourceLineNumbersEnabled>true</sourceLineNumbersEnabled>
+         <topBarContainerStyle>width: 90%;</topBarContainerStyle>
+         <gitHub>
+            <projectId>alexander-perucci/spring-grow</projectId>
+            <ribbonOrientation>right</ribbonOrientation>
+            <ribbonColor>green</ribbonColor>
+         </gitHub>
+      </fluidoSkin>
+   </custom>
 
-    <publishDate position="left"/>
-    <version position="right"/>
+   <publishDate position="left" />
+   <version position="right" />
 
-    <body>
+   <body>
+      <menu ref="parent" />
+      <menu name="Overview">
+         <item name="Introduction" href="index.html" />
+         <item name="Changelog" href="changelog.html" />
+      </menu>
+      <menu ref="reports" inherit="top" />
+   </body>
 
-        <menu ref="parent"/>
-
-        <menu name="Overview">
-            <item name="Introduction" href="index.html"/>
-            <item name="Changelog" href="changelog.html"/>
-        </menu>
-
-        <menu ref="reports" inherit="top"/>
-    </body>
 </project>
