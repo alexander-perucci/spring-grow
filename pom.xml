@@ -34,12 +34,12 @@ limitations under the License.
       </license>
    </licenses>
 
-   <organization>
-      <name>Alexander Perucci</name>
-      <url>http://www.alexanderperucci.com/</url>
-   </organization>
-
    <inceptionYear>2017</inceptionYear>
+
+   <ciManagement>
+      <system>travis-ci</system>
+      <url>https://travis-ci.org/alexander-perucci/spring-grow</url>
+   </ciManagement>
 
    <scm>
       <connection>scm:git:git@github.com:alexander-perucci/spring-grow.git</connection>
@@ -48,8 +48,8 @@ limitations under the License.
    </scm>
 
    <issueManagement>
+      <system>GitHub</system>
       <url>https://github.com/alexander-perucci/spring-grow/issues</url>
-      <system>GitHub Issues</system>
    </issueManagement>
 
    <distributionManagement>
@@ -63,6 +63,10 @@ limitations under the License.
          <name>OSS sonatype Snapshots Repository</name>
          <url>https://oss.sonatype.org/content/repositories/snapshots/</url>
       </snapshotRepository>
+      <site>
+         <id>github-alexander-perucci</id>
+         <url>scm:git:git@github.com:alexander-perucci/spring-grow.git</url>
+      </site>
    </distributionManagement>
 
    <developers>
@@ -78,24 +82,96 @@ limitations under the License.
       </developer>
    </developers>
 
+   <reporting>
+      <plugins>
+         <plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-project-info-reports-plugin</artifactId>
+            <version>${maven-project-info-reports-plugin.version}</version>
+            <configuration>
+               <dependencyDetailsEnabled>false</dependencyDetailsEnabled>
+               <dependencyLocationsEnabled>false</dependencyLocationsEnabled>
+            </configuration>
+            <!-- list of reports: https://maven.apache.org/plugins/maven-project-info-reports-plugin/plugin-info.html -->
+            <reportSets>
+               <reportSet>
+                  <reports>
+                     <report>summary</report>
+                     <report>project-team</report>
+                     <report>dependency-info</report>
+                     <report>distribution-management</report>
+                     <report>issue-tracking</report>
+                     <report>license</report>
+                     <report>cim</report>
+                     <report>scm</report>
+                     <report>plugins</report>
+                  </reports>
+               </reportSet>
+            </reportSets>
+         </plugin>
+         <plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-changes-plugin</artifactId>
+            <version>${maven-changes-plugin.version}</version>
+            <configuration>
+               <githubAPIScheme>https</githubAPIScheme>
+               <githubAPIPort>443</githubAPIPort>
+               <githubAPIServerId>github-alexander-perucci</githubAPIServerId>
+               <onlyCurrentVersion>false</onlyCurrentVersion>
+               <onlyMilestoneIssues>true</onlyMilestoneIssues>
+            </configuration>
+            <reportSets>
+               <reportSet>
+                  <reports>
+                     <report>github-report</report>
+                  </reports>
+               </reportSet>
+            </reportSets>
+         </plugin>
+         <plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-invoker-plugin</artifactId>
+            <version>${maven-invoker-plugin.version}</version>
+         </plugin>
+         <plugin>
+            <groupId>org.apache.rat</groupId>
+            <artifactId>apache-rat-plugin</artifactId>
+            <version>${apache-rat-plugin.version}</version>
+            <configuration>
+               <excludes>
+                  <exclude>**/archetype-resources/**</exclude>
+               </excludes>
+            </configuration>
+         </plugin>
+      </plugins>
+   </reporting>
+
    <properties>
+      <!-- project -->
       <maven.compiler.source>1.8</maven.compiler.source>
       <maven.compiler.target>1.8</maven.compiler.target>
       <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+      <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
       <!-- plugins -->
       <maven-resources-plugin.version>3.0.2</maven-resources-plugin.version>
       <apache-rat-plugin.version>0.12</apache-rat-plugin.version>
       <maven-invoker-plugin.version>2.0.0</maven-invoker-plugin.version>
+      <maven-site-plugin.version>3.6</maven-site-plugin.version>
       <maven-release-plugin.version>2.5.3</maven-release-plugin.version>
       <maven-source-plugin.version>3.0.1</maven-source-plugin.version>
       <maven-javadoc-plugin.version>2.10.4</maven-javadoc-plugin.version>
       <maven-gpg-plugin.version>1.6</maven-gpg-plugin.version>
       <maven-deploy-plugin.version>2.8.2</maven-deploy-plugin.version>
+      <maven-scm-publish-plugin.version>1.1</maven-scm-publish-plugin.version>
+      <maven-project-info-reports-plugin.version>2.9</maven-project-info-reports-plugin.version>
+      <maven-changes-plugin.version>2.12.1</maven-changes-plugin.version>
+      <!-- dependencies -->
+      <doxia-module-markdown.version>1.7</doxia-module-markdown.version>
    </properties>
 
    <build>
       <plugins>
-         <!-- Put NOTICE and LICENSE files in all artifacts and javadocs -->
+        <!-- Put NOTICE and LICENSE files in all artifacts and javadocs -->
         <plugin>
             <groupId>org.apache.maven.plugins</groupId>
             <artifactId>maven-resources-plugin</artifactId>
@@ -203,10 +279,31 @@ limitations under the License.
          </plugin>
          <plugin>
             <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-site-plugin</artifactId>
+            <version>${maven-site-plugin.version}</version>
+            <dependencies>
+               <dependency>
+                  <groupId>org.apache.maven.doxia</groupId>
+                  <artifactId>doxia-module-markdown</artifactId>
+                  <version>${doxia-module-markdown.version}</version>
+               </dependency>
+            </dependencies>
+            <executions>
+               <execution>
+                  <id>stage-for-scm-publish</id>
+                  <phase>post-site</phase>
+                  <goals>
+                     <goal>stage</goal>
+                  </goals>
+               </execution>
+            </executions>
+         </plugin>
+         <plugin>
+            <groupId>org.apache.maven.plugins</groupId>
             <artifactId>maven-release-plugin</artifactId>
             <version>${maven-release-plugin.version}</version>
             <configuration>
-               <goals>deploy</goals>
+               <goals>deploy site</goals>
                <useReleaseProfile>false</useReleaseProfile>
                <releaseProfiles>release</releaseProfiles>
                <autoVersionSubmodules>true</autoVersionSubmodules>
@@ -266,8 +363,24 @@ limitations under the License.
                </plugin>
                <plugin>
                   <groupId>org.apache.maven.plugins</groupId>
-                  <artifactId>maven-deploy-plugin</artifactId>
-                  <version>${maven-deploy-plugin.version}</version>
+                  <artifactId>maven-scm-publish-plugin</artifactId>
+                  <version>${maven-scm-publish-plugin.version}</version>
+                  <configuration>
+                     <checkoutDirectory>${project.build.directory}/scmpublish</checkoutDirectory>
+                     <checkinComment>Publishing Site Docs for ${project.artifactId}:${project.version}</checkinComment>
+                     <content>${project.reporting.outputDirectory}</content>
+                     <skipDeletedFiles>true</skipDeletedFiles>
+                     <scmBranch>gh-pages</scmBranch>
+                  </configuration>
+                  <executions>
+                     <execution>
+                        <id>scm-publish</id>
+                        <phase>site</phase>
+                        <goals>
+                           <goal>publish-scm</goal>
+                        </goals>
+                     </execution>
+                  </executions>
                </plugin>
             </plugins>
          </build>

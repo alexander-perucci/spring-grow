@@ -13,10 +13,6 @@ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 See the License for the specific language governing permissions and
 limitations under the License.
 -->
-# Spring Grow
-[![Maven Central](https://maven-badges.herokuapp.com/maven-central/com.alexanderperucci/spring-grow/badge.svg)](https://maven-badges.herokuapp.com/maven-central/com.alexanderperucci/spring-grow) [![Build Status](https://travis-ci.org/alexander-perucci/spring-grow.svg?branch=master)](https://travis-ci.org/alexander-perucci/spring-grow)
-
-
 ## What the hank?
 
 Spring Grow is a Maven Archetype that creates a maven project for building a secured web application using Spring Web MVC Framework and Spring XML based configuration. If you need to quickly start up a template of a Spring MVC web application that is secured with Spring Security then this archetype is a good starting point.
@@ -60,12 +56,12 @@ Anyway, once you have create the web application, you should create the database
 
 When the MySQL database will be ready, you just have to decide how to run the web application i.e., in `embedded` mode or `building a Tomcat bundle`.
 
-### Running in embedded mode
+#### Running in embedded mode
 
 You can run an embedded Tomcat instance without the need of installing a local Tomcat Server, you just have to run `mvn -Pembedded` in the root directory of the secured web application
 and maven will start the embedded Tomcat instance on port `8090`. Check at http://localhost:8090/[YOUR_WEB_APPLICATION_ARTIFACT_ID] and put username: admin and password: password to sig in.
 
-### Building a Tomcat bundle
+#### Building a Tomcat bundle
 
 Building a Tomcat bundle is also very simple, you just have to run `mvn -Pbuild-tomcat` in the root directory of the secured web application. Unlike before you can find the Tomcat bundle on `target/[YOUR_WEB_APPLICATION_ARTIFACT_ID]-[YOUR_WEB_APPLICATION_VERSION].zip`. You just have to do unzip the bundle and execute the script (i.e., startup.sh or startup.bat) in order to start Tomcat on port `8090`. Check at http://localhost:8090/[YOUR_WEB_APPLICATION_ARTIFACT_ID] and put username: admin and password: password to sig in.
 

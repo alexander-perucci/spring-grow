@@ -1,1 +1,5 @@
 target/
+
+# maven release files
+pom.xml.releaseBackup
+release.properties
