@@ -13,7 +13,7 @@ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 See the License for the specific language governing permissions and
 limitations under the License.
 -->
-## What the hank?
+## Introduction
 
 Spring Grow is a Maven Archetype that creates a maven project for building a secured web application using Spring Web MVC Framework and Spring XML based configuration. If you need to quickly start up a template of a Spring MVC web application that is secured with Spring Security then this archetype is a good starting point.
 
