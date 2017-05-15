@@ -98,8 +98,5 @@ __Functional features for administrator users (more than generic user):__
 3. Define a service for each business model class in `[YOUR_WEB_APPLICATION_ROOT_JAVA_PACKAGE].business` and provide a JPA implementation `[YOUR_WEB_APPLICATION_ROOT_JAVA_PACKAGE].business.impl` for each service. (Don't worry for the service and the related JPA implementation, is very simple, see `RoleService.java` and `JPARoleService.java` to get an idea)
 4. Create a controller in `[YOUR_WEB_APPLICATION_ROOT_JAVA_PACKAGE].presentation`, provide a view mapping in `src/main/webapp/WEB-INF/spring/tiles-defs.xml` and define the jsp view in `src/main/webapp/WEB-INF/views/`
 
-## Contribute
-You can also support this project by donating on Gratipay [here](https://www.gratipay.com/alexander_perucci/)
-
 ## License
 Licensed under the Apache Software License, Version 2.0.
