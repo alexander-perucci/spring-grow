@@ -288,6 +288,9 @@ limitations under the License.
                   <version>${doxia-module-markdown.version}</version>
                </dependency>
             </dependencies>
+            <configuration>
+               <generateSitemap>true</generateSitemap>
+            </configuration>
             <executions>
                <execution>
                   <id>stage-for-scm-publish</id>

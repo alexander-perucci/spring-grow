@@ -45,6 +45,7 @@ limitations under the License.
       <menu name="Overview">
          <item name="Introduction" href="index.html" />
          <item name="Changelog" href="changelog.html" />
+         <item name="Sitemap" href="sitemap.html" />
       </menu>
       <menu ref="reports" inherit="top" />
    </body>
