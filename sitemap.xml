@@ -8,70 +8,92 @@
 
 <url>
   <loc>https://alexander-perucci.github.io/spring-grow/</loc>
-  <lastmod>2017-05-24T07:47:59+00:00</lastmod>
+  <lastmod>2017-05-24T08:01:47+00:00</lastmod>
+  <priority>1.00</priority>
 </url>
 <url>
   <loc>https://alexander-perucci.github.io/spring-grow/changelog.html</loc>
-  <lastmod>2017-05-24T07:47:59+00:00</lastmod>
+  <lastmod>2017-05-24T08:01:47+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://alexander-perucci.github.io/spring-grow/sitemap.html</loc>
+  <lastmod>2017-05-24T08:01:47+00:00</lastmod>
+  <priority>0.80</priority>
 </url>
 <url>
   <loc>https://alexander-perucci.github.io/spring-grow/project-info.html</loc>
-  <lastmod>2017-05-24T07:47:59+00:00</lastmod>
+  <lastmod>2017-05-24T08:01:47+00:00</lastmod>
+  <priority>0.80</priority>
 </url>
 <url>
   <loc>https://alexander-perucci.github.io/spring-grow/project-reports.html</loc>
-  <lastmod>2017-05-24T07:47:59+00:00</lastmod>
+  <lastmod>2017-05-24T08:01:47+00:00</lastmod>
+  <priority>0.80</priority>
 </url>
 <url>
   <loc>https://alexander-perucci.github.io/spring-grow/index.html</loc>
-  <lastmod>2017-05-24T07:47:59+00:00</lastmod>
+  <lastmod>2017-05-24T08:01:47+00:00</lastmod>
+  <priority>0.64</priority>
 </url>
 <url>
   <loc>https://alexander-perucci.github.io/spring-grow/project-summary.html</loc>
-  <lastmod>2017-05-24T07:47:59+00:00</lastmod>
+  <lastmod>2017-05-24T08:01:47+00:00</lastmod>
+  <priority>0.64</priority>
 </url>
 <url>
   <loc>https://alexander-perucci.github.io/spring-grow/team-list.html</loc>
-  <lastmod>2017-05-24T07:47:59+00:00</lastmod>
+  <lastmod>2017-05-24T08:01:47+00:00</lastmod>
+  <priority>0.64</priority>
 </url>
 <url>
   <loc>https://alexander-perucci.github.io/spring-grow/dependency-info.html</loc>
-  <lastmod>2017-05-24T07:47:59+00:00</lastmod>
+  <lastmod>2017-05-24T08:01:47+00:00</lastmod>
+  <priority>0.64</priority>
 </url>
 <url>
   <loc>https://alexander-perucci.github.io/spring-grow/distribution-management.html</loc>
-  <lastmod>2017-05-24T07:47:59+00:00</lastmod>
+  <lastmod>2017-05-24T08:01:47+00:00</lastmod>
+  <priority>0.64</priority>
 </url>
 <url>
   <loc>https://alexander-perucci.github.io/spring-grow/issue-tracking.html</loc>
-  <lastmod>2017-05-24T07:47:59+00:00</lastmod>
+  <lastmod>2017-05-24T08:01:47+00:00</lastmod>
+  <priority>0.64</priority>
 </url>
 <url>
   <loc>https://alexander-perucci.github.io/spring-grow/license.html</loc>
-  <lastmod>2017-05-24T07:47:59+00:00</lastmod>
+  <lastmod>2017-05-24T08:01:47+00:00</lastmod>
+  <priority>0.64</priority>
 </url>
 <url>
   <loc>https://alexander-perucci.github.io/spring-grow/integration.html</loc>
-  <lastmod>2017-05-24T07:47:59+00:00</lastmod>
+  <lastmod>2017-05-24T08:01:47+00:00</lastmod>
+  <priority>0.64</priority>
 </url>
 <url>
   <loc>https://alexander-perucci.github.io/spring-grow/source-repository.html</loc>
-  <lastmod>2017-05-24T07:47:59+00:00</lastmod>
+  <lastmod>2017-05-24T08:01:47+00:00</lastmod>
+  <priority>0.64</priority>
 </url>
 <url>
   <loc>https://alexander-perucci.github.io/spring-grow/plugins.html</loc>
-  <lastmod>2017-05-24T07:47:59+00:00</lastmod>
+  <lastmod>2017-05-24T08:01:47+00:00</lastmod>
+  <priority>0.64</priority>
 </url>
 <url>
   <loc>https://alexander-perucci.github.io/spring-grow/github-report.html</loc>
-  <lastmod>2017-05-24T07:47:59+00:00</lastmod>
+  <lastmod>2017-05-24T08:01:47+00:00</lastmod>
+  <priority>0.64</priority>
 </url>
 <url>
   <loc>https://alexander-perucci.github.io/spring-grow/invoker-report.html</loc>
-  <lastmod>2017-05-24T07:47:59+00:00</lastmod>
+  <lastmod>2017-05-24T08:01:47+00:00</lastmod>
+  <priority>0.64</priority>
 </url>
 <url>
   <loc>https://alexander-perucci.github.io/spring-grow/rat-report.html</loc>
-  <lastmod>2017-05-24T07:47:59+00:00</lastmod>
+  <lastmod>2017-05-24T08:01:47+00:00</lastmod>
+  <priority>0.64</priority>
 </url>
 </urlset>
