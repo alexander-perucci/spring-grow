@@ -56,19 +56,19 @@ This will create a template of the secured web application locally named [YOUR_W
 
 ## Can I try the created Spring MVC web application without change anything?
 
-Yes, but at the currently version of the archetype, the created Spring MVC web application require an instance of MySQL in running on your machine.
-Anyway, once you have create the web application, you should create the database schema and import sample data to it. You can find both `[YOUR_WEB_APPLICATION_ARTIFACT_ID]-schema.sql` and `[YOUR_WEB_APPLICATION_ARTIFACT_ID]-data.sql` SQL scripts in the root directory of the secured web application which they will do it for you.
+Yes, but at the currently version of the archetype, the created Spring MVC web application requires an instance of MySQL in running on your machine.
+Anyway, once you created the web application, you should create the database schema and import sample data to it. You can find both `[YOUR_WEB_APPLICATION_ARTIFACT_ID]-schema.sql` and `[YOUR_WEB_APPLICATION_ARTIFACT_ID]-data.sql` SQL scripts in the root directory of the secured web application which they will do it for you.
 
 When the MySQL database will be ready, you just have to decide how to run the web application i.e., in `embedded` mode or `building a Tomcat bundle`.
 
 ### Running in embedded mode
 
 You can run an embedded Tomcat instance without the need of installing a local Tomcat Server, you just have to run `mvn -Pembedded` in the root directory of the secured web application
-and maven will start the embedded Tomcat instance on port `8090`. Check at http://localhost:8090/[YOUR_WEB_APPLICATION_ARTIFACT_ID] and put username: admin and password: password to sig in.
+and maven will start the embedded Tomcat instance on port `8090`. Check at http://localhost:8090/[YOUR_WEB_APPLICATION_ARTIFACT_ID] and put username: admin and password: password to sign in.
 
 ### Building a Tomcat bundle
 
-Building a Tomcat bundle is also very simple, you just have to run `mvn -Pbuild-tomcat` in the root directory of the secured web application. Unlike before you can find the Tomcat bundle on `target/[YOUR_WEB_APPLICATION_ARTIFACT_ID]-[YOUR_WEB_APPLICATION_VERSION].zip`. You just have to do unzip the bundle and execute the script (i.e., startup.sh or startup.bat) in order to start Tomcat on port `8090`. Check at http://localhost:8090/[YOUR_WEB_APPLICATION_ARTIFACT_ID] and put username: admin and password: password to sig in.
+Building a Tomcat bundle is also very simple, you just have to run `mvn -Pbuild-tomcat` in the root directory of the secured web application. Unlike before you can find the Tomcat bundle on `target/[YOUR_WEB_APPLICATION_ARTIFACT_ID]-[YOUR_WEB_APPLICATION_VERSION].zip`. You just have to do unzip the bundle and execute the script (i.e., startup.sh or startup.bat) in order to start Tomcat on port `8090`. Check at http://localhost:8090/[YOUR_WEB_APPLICATION_ARTIFACT_ID] and put username: admin and password: password to sign in.
 
 ## What features are already implemented?
 
@@ -76,11 +76,11 @@ For now, the template of the secured Spring MVC web application manage an authen
 
 __Functional features for generic users:__
 
-* Sig up, Sig in, Sig out on the web application
+* Sign up, Sign in, Sig out on the web application
 
-* Chage user settings (e.g., first name, last name, password, ...)
+* Change user settings (e.g., first name, last name, password, ...)
 
-* Chage user avatar
+* Change user avatar
 
 
 __Functional features for administrator users (more than generic user):__
