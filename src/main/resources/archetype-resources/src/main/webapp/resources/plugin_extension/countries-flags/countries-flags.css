@@ -1,0 +1,1641 @@
+.flag-AD,
+.flag-AE,
+.flag-AF,
+.flag-AG,
+.flag-AI,
+.flag-AL,
+.flag-AM,
+.flag-AN,
+.flag-AO,
+.flag-AQ,
+.flag-AR,
+.flag-AS,
+.flag-AT,
+.flag-AU,
+.flag-AW,
+.flag-AX,
+.flag-AZ,
+.flag-BA,
+.flag-BB,
+.flag-BD,
+.flag-BE,
+.flag-BG,
+.flag-BH,
+.flag-BI,
+.flag-BJ,
+.flag-BL,
+.flag-BM,
+.flag-BN,
+.flag-BO,
+.flag-BR,
+.flag-BS,
+.flag-BT,
+.flag-BW,
+.flag-BY,
+.flag-BZ,
+.flag-CA,
+.flag-CD,
+.flag-CF,
+.flag-CG,
+.flag-CH,
+.flag-CI,
+.flag-CL,
+.flag-CM,
+.flag-CN,
+.flag-CO,
+.flag-CR,
+.flag-CV,
+.flag-CY,
+.flag-CZ,
+.flag-DJ,
+.flag-DK,
+.flag-DM,
+.flag-DO,
+.flag-DZ,
+.flag-EC,
+.flag-EE,
+.flag-EG,
+.flag-EH,
+.flag-ER,
+.flag-ES,
+.flag-ET,
+.flag-EU,
+.flag-FI,
+.flag-FJ,
+.flag-FK,
+.flag-FM,
+.flag-FO,
+.flag-FR,
+.flag-FX,
+.flag-GF,
+.flag-GP,
+.flag-MQ,
+.flag-NC,
+.flag-PF,
+.flag-PM,
+.flag-RE,
+.flag-TF,
+.flag-WF,
+.flag-GA,
+.flag-GB,
+.flag-GD,
+.flag-GE,
+.flag-GG,
+.flag-GH,
+.flag-GL,
+.flag-GM,
+.flag-GN,
+.flag-GQ,
+.flag-GR,
+.flag-GS,
+.flag-GT,
+.flag-GU,
+.flag-GW,
+.flag-GY,
+.flag-HK,
+.flag-HN,
+.flag-HR,
+.flag-HT,
+.flag-HU,
+.flag-ID,
+.flag-IE,
+.flag-IL,
+.flag-IM,
+.flag-IN,
+.flag-IQ,
+.flag-IS,
+.flag-IT,
+.flag-JE,
+.flag-JM,
+.flag-JO,
+.flag-JP,
+.flag-KE,
+.flag-KG,
+.flag-KH,
+.flag-KI,
+.flag-KM,
+.flag-KN,
+.flag-KP,
+.flag-KR,
+.flag-KV,
+.flag-KW,
+.flag-KY,
+.flag-LA,
+.flag-LC,
+.flag-LK,
+.flag-LR,
+.flag-LS,
+.flag-LT,
+.flag-LU,
+.flag-LV,
+.flag-LY,
+.flag-MA,
+.flag-ME,
+.flag-MG,
+.flag-MH,
+.flag-ML,
+.flag-MM,
+.flag-MP,
+.flag-MR,
+.flag-MS,
+.flag-MT,
+.flag-MU,
+.flag-MV,
+.flag-MW,
+.flag-MZ,
+.flag-NA,
+.flag-NE,
+.flag-NF,
+.flag-NG,
+.flag-NI,
+.flag-NL,
+.flag-NO,
+.flag-NP,
+.flag-NR,
+.flag-NZ,
+.flag-OM,
+.flag-PA,
+.flag-PE,
+.flag-PG,
+.flag-PH,
+.flag-PK,
+.flag-PL,
+.flag-PN,
+.flag-PS,
+.flag-PT,
+.flag-PW,
+.flag-PY,
+.flag-QA,
+.flag-RS,
+.flag-RU,
+.flag-RW,
+.flag-SA,
+.flag-SB,
+.flag-SC,
+.flag-SD,
+.flag-SE,
+.flag-SG,
+.flag-SH,
+.flag-SI,
+.flag-SK,
+.flag-SM,
+.flag-SN,
+.flag-SO,
+.flag-SR,
+.flag-SS,
+.flag-ST,
+.flag-SV,
+.flag-SY,
+.flag-SZ,
+.flag-TC,
+.flag-TD,
+.flag-TG,
+.flag-TH,
+.flag-TJ,
+.flag-TM,
+.flag-TN,
+.flag-TP,
+.flag-TR,
+.flag-TT,
+.flag-TV,
+.flag-TW,
+.flag-TZ,
+.flag-UA,
+.flag-UG,
+.flag-US,
+.flag-UY,
+.flag-UZ,
+.flag-VC,
+.flag-VE,
+.flag-VG,
+.flag-VI,
+.flag-VN,
+.flag-VU,
+.flag-WS,
+.flag-YE,
+.flag-ZA,
+.flag-ZM,
+.flag-BF,
+.flag-CU,
+.flag-DE,
+.flag-IR,
+.flag-KZ,
+.flag-LB,
+.flag-LI,
+.flag-MC,
+.flag-MD,
+.flag-MK,
+.flag-MN,
+.flag-MO,
+.flag-MX,
+.flag-MY,
+.flag-PR,
+.flag-RO,
+.flag-SL,
+.flag-TO,
+.flag-VA,
+.flag-ZW {
+  width: 16px;
+  height: 14px;
+  background: url(countries-flags.png) no-repeat;
+}
+
+.flag-AD:empty,
+.flag-AE:empty,
+.flag-AF:empty,
+.flag-AG:empty,
+.flag-AI:empty,
+.flag-AL:empty,
+.flag-AM:empty,
+.flag-AN:empty,
+.flag-AO:empty,
+.flag-AQ:empty,
+.flag-AR:empty,
+.flag-AS:empty,
+.flag-AT:empty,
+.flag-AU:empty,
+.flag-AW:empty,
+.flag-AX:empty,
+.flag-AZ:empty,
+.flag-BA:empty,
+.flag-BB:empty,
+.flag-BD:empty,
+.flag-BE:empty,
+.flag-BG:empty,
+.flag-BH:empty,
+.flag-BI:empty,
+.flag-BJ:empty,
+.flag-BL:empty,
+.flag-BM:empty,
+.flag-BN:empty,
+.flag-BO:empty,
+.flag-BR:empty,
+.flag-BS:empty,
+.flag-BT:empty,
+.flag-BW:empty,
+.flag-BY:empty,
+.flag-BZ:empty,
+.flag-CA:empty,
+.flag-CD:empty,
+.flag-CF:empty,
+.flag-CG:empty,
+.flag-CH:empty,
+.flag-CI:empty,
+.flag-CL:empty,
+.flag-CM:empty,
+.flag-CN:empty,
+.flag-CO:empty,
+.flag-CR:empty,
+.flag-CV:empty,
+.flag-CY:empty,
+.flag-CZ:empty,
+.flag-DJ:empty,
+.flag-DK:empty,
+.flag-DM:empty,
+.flag-DO:empty,
+.flag-DZ:empty,
+.flag-EC:empty,
+.flag-EE:empty,
+.flag-EG:empty,
+.flag-EH:empty,
+.flag-ER:empty,
+.flag-ES:empty,
+.flag-ET:empty,
+.flag-EU:empty,
+.flag-FI:empty,
+.flag-FJ:empty,
+.flag-FK:empty,
+.flag-FM:empty,
+.flag-FO:empty,
+.flag-FR:empty,
+.flag-FX:empty,
+.flag-GF:empty,
+.flag-GP:empty,
+.flag-MQ:empty,
+.flag-NC:empty,
+.flag-PF:empty,
+.flag-PM:empty,
+.flag-RE:empty,
+.flag-TF:empty,
+.flag-WF:empty,
+.flag-GA:empty,
+.flag-GB:empty,
+.flag-GD:empty,
+.flag-GE:empty,
+.flag-GG:empty,
+.flag-GH:empty,
+.flag-GL:empty,
+.flag-GM:empty,
+.flag-GN:empty,
+.flag-GQ:empty,
+.flag-GR:empty,
+.flag-GS:empty,
+.flag-GT:empty,
+.flag-GU:empty,
+.flag-GW:empty,
+.flag-GY:empty,
+.flag-HK:empty,
+.flag-HN:empty,
+.flag-HR:empty,
+.flag-HT:empty,
+.flag-HU:empty,
+.flag-ID:empty,
+.flag-IE:empty,
+.flag-IL:empty,
+.flag-IM:empty,
+.flag-IN:empty,
+.flag-IQ:empty,
+.flag-IS:empty,
+.flag-IT:empty,
+.flag-JE:empty,
+.flag-JM:empty,
+.flag-JO:empty,
+.flag-JP:empty,
+.flag-KE:empty,
+.flag-KG:empty,
+.flag-KH:empty,
+.flag-KI:empty,
+.flag-KM:empty,
+.flag-KN:empty,
+.flag-KP:empty,
+.flag-KR:empty,
+.flag-KV:empty,
+.flag-KW:empty,
+.flag-KY:empty,
+.flag-LA:empty,
+.flag-LC:empty,
+.flag-LK:empty,
+.flag-LR:empty,
+.flag-LS:empty,
+.flag-LT:empty,
+.flag-LU:empty,
+.flag-LV:empty,
+.flag-LY:empty,
+.flag-MA:empty,
+.flag-ME:empty,
+.flag-MG:empty,
+.flag-MH:empty,
+.flag-ML:empty,
+.flag-MM:empty,
+.flag-MP:empty,
+.flag-MR:empty,
+.flag-MS:empty,
+.flag-MT:empty,
+.flag-MU:empty,
+.flag-MV:empty,
+.flag-MW:empty,
+.flag-MZ:empty,
+.flag-NA:empty,
+.flag-NE:empty,
+.flag-NF:empty,
+.flag-NG:empty,
+.flag-NI:empty,
+.flag-NL:empty,
+.flag-NO:empty,
+.flag-NP:empty,
+.flag-NR:empty,
+.flag-NZ:empty,
+.flag-OM:empty,
+.flag-PA:empty,
+.flag-PE:empty,
+.flag-PG:empty,
+.flag-PH:empty,
+.flag-PK:empty,
+.flag-PL:empty,
+.flag-PN:empty,
+.flag-PS:empty,
+.flag-PT:empty,
+.flag-PW:empty,
+.flag-PY:empty,
+.flag-QA:empty,
+.flag-RS:empty,
+.flag-RU:empty,
+.flag-RW:empty,
+.flag-SA:empty,
+.flag-SB:empty,
+.flag-SC:empty,
+.flag-SD:empty,
+.flag-SE:empty,
+.flag-SG:empty,
+.flag-SH:empty,
+.flag-SI:empty,
+.flag-SK:empty,
+.flag-SM:empty,
+.flag-SN:empty,
+.flag-SO:empty,
+.flag-SR:empty,
+.flag-SS:empty,
+.flag-ST:empty,
+.flag-SV:empty,
+.flag-SY:empty,
+.flag-SZ:empty,
+.flag-TC:empty,
+.flag-TD:empty,
+.flag-TG:empty,
+.flag-TH:empty,
+.flag-TJ:empty,
+.flag-TM:empty,
+.flag-TN:empty,
+.flag-TP:empty,
+.flag-TR:empty,
+.flag-TT:empty,
+.flag-TV:empty,
+.flag-TW:empty,
+.flag-TZ:empty,
+.flag-UA:empty,
+.flag-UG:empty,
+.flag-US:empty,
+.flag-UY:empty,
+.flag-UZ:empty,
+.flag-VC:empty,
+.flag-VE:empty,
+.flag-VG:empty,
+.flag-VI:empty,
+.flag-VN:empty,
+.flag-VU:empty,
+.flag-WS:empty,
+.flag-YE:empty,
+.flag-ZA:empty,
+.flag-ZM:empty,
+.flag-BF:empty,
+.flag-CU:empty,
+.flag-DE:empty,
+.flag-IR:empty,
+.flag-KZ:empty,
+.flag-LB:empty,
+.flag-LI:empty,
+.flag-MC:empty,
+.flag-MD:empty,
+.flag-MK:empty,
+.flag-MN:empty,
+.flag-MO:empty,
+.flag-MX:empty,
+.flag-MY:empty,
+.flag-PR:empty,
+.flag-RO:empty,
+.flag-SL:empty,
+.flag-TO:empty,
+.flag-VA:empty,
+.flag-ZW:empty {
+  width: 16px;
+}
+
+.flag-AD,
+.flag-AE,
+.flag-AF,
+.flag-AG,
+.flag-AI,
+.flag-AL,
+.flag-AM,
+.flag-AN,
+.flag-AO,
+.flag-AQ,
+.flag-AR,
+.flag-AS,
+.flag-AT,
+.flag-AU,
+.flag-AW,
+.flag-AX,
+.flag-AZ,
+.flag-BA,
+.flag-BB,
+.flag-BD,
+.flag-BE,
+.flag-BG,
+.flag-BH,
+.flag-BI,
+.flag-BJ,
+.flag-BL,
+.flag-BM,
+.flag-BN,
+.flag-BO,
+.flag-BR,
+.flag-BS,
+.flag-BT,
+.flag-BW,
+.flag-BY,
+.flag-BZ,
+.flag-CA,
+.flag-CD,
+.flag-CF,
+.flag-CG,
+.flag-CH,
+.flag-CI,
+.flag-CL,
+.flag-CM,
+.flag-CN,
+.flag-CO,
+.flag-CR,
+.flag-CV,
+.flag-CY,
+.flag-CZ,
+.flag-DJ,
+.flag-DK,
+.flag-DM,
+.flag-DO,
+.flag-DZ,
+.flag-EC,
+.flag-EE,
+.flag-EG,
+.flag-EH,
+.flag-ER,
+.flag-ES,
+.flag-ET,
+.flag-EU,
+.flag-FI,
+.flag-FJ,
+.flag-FK,
+.flag-FM,
+.flag-FO,
+.flag-FR,
+.flag-FX,
+.flag-GF,
+.flag-GP,
+.flag-MQ,
+.flag-NC,
+.flag-PF,
+.flag-PM,
+.flag-RE,
+.flag-TF,
+.flag-WF,
+.flag-GA,
+.flag-GB,
+.flag-GD,
+.flag-GE,
+.flag-GG,
+.flag-GH,
+.flag-GL,
+.flag-GM,
+.flag-GN,
+.flag-GQ,
+.flag-GR,
+.flag-GS,
+.flag-GT,
+.flag-GU,
+.flag-GW,
+.flag-GY,
+.flag-HK,
+.flag-HN,
+.flag-HR,
+.flag-HT,
+.flag-HU,
+.flag-ID,
+.flag-IE,
+.flag-IL,
+.flag-IM,
+.flag-IN,
+.flag-IQ,
+.flag-IS,
+.flag-IT,
+.flag-JE,
+.flag-JM,
+.flag-JO,
+.flag-JP,
+.flag-KE,
+.flag-KG,
+.flag-KH,
+.flag-KI,
+.flag-KM,
+.flag-KN,
+.flag-KP,
+.flag-KR,
+.flag-KV,
+.flag-KW,
+.flag-KY,
+.flag-LA,
+.flag-LC,
+.flag-LK,
+.flag-LR,
+.flag-LS,
+.flag-LT,
+.flag-LU,
+.flag-LV,
+.flag-LY,
+.flag-MA,
+.flag-ME,
+.flag-MG,
+.flag-MH,
+.flag-ML,
+.flag-MM,
+.flag-MP,
+.flag-MR,
+.flag-MS,
+.flag-MT,
+.flag-MU,
+.flag-MV,
+.flag-MW,
+.flag-MZ,
+.flag-NA,
+.flag-NE,
+.flag-NF,
+.flag-NG,
+.flag-NI,
+.flag-NL,
+.flag-NO,
+.flag-NP,
+.flag-NR,
+.flag-NZ,
+.flag-OM,
+.flag-PA,
+.flag-PE,
+.flag-PG,
+.flag-PH,
+.flag-PK,
+.flag-PL,
+.flag-PN,
+.flag-PS,
+.flag-PT,
+.flag-PW,
+.flag-PY,
+.flag-QA,
+.flag-RS,
+.flag-RU,
+.flag-RW,
+.flag-SA,
+.flag-SB,
+.flag-SC,
+.flag-SD,
+.flag-SE,
+.flag-SG,
+.flag-SH,
+.flag-SI,
+.flag-SK,
+.flag-SM,
+.flag-SN,
+.flag-SO,
+.flag-SR,
+.flag-SS,
+.flag-ST,
+.flag-SV,
+.flag-SY,
+.flag-SZ,
+.flag-TC,
+.flag-TD,
+.flag-TG,
+.flag-TH,
+.flag-TJ,
+.flag-TM,
+.flag-TN,
+.flag-TP,
+.flag-TR,
+.flag-TT,
+.flag-TV,
+.flag-TW,
+.flag-TZ,
+.flag-UA,
+.flag-UG,
+.flag-US,
+.flag-UY,
+.flag-UZ,
+.flag-VC,
+.flag-VE,
+.flag-VG,
+.flag-VI,
+.flag-VN,
+.flag-VU,
+.flag-WS,
+.flag-YE,
+.flag-ZA,
+.flag-ZM,
+.flag-BF,
+.flag-CU,
+.flag-DE,
+.flag-IR,
+.flag-KZ,
+.flag-LB,
+.flag-LI,
+.flag-MC,
+.flag-MD,
+.flag-MK,
+.flag-MN,
+.flag-MO,
+.flag-MX,
+.flag-MY,
+.flag-PR,
+.flag-RO,
+.flag-SL,
+.flag-TO,
+.flag-VA,
+.flag-ZW,
+.flag-EUR,
+.flag-XCD {
+  margin-right: 5px;
+}
+
+.flag-AD {
+  background-position: -1921px 0;
+}
+
+.flag-AE {
+  background-position: -1904px 0;
+}
+
+.flag-AF {
+  background-position: -3689px 0;
+}
+
+.flag-AG {
+  background-position: -34px 0;
+}
+
+.flag-AI {
+  background-position: -51px 0;
+}
+
+.flag-AL {
+  background-position: -68px 0;
+}
+
+.flag-AM {
+  background-position: -85px 0;
+}
+
+.flag-AN {
+  background-position: -102px 0;
+}
+
+.flag-AO {
+  background-position: -119px 0;
+}
+
+.flag-AQ {
+  background-position: -136px 0;
+}
+
+.flag-AR {
+  background-position: -153px 0;
+}
+
+.flag-AS {
+  background-position: -170px 0;
+}
+
+.flag-AT {
+  background-position: -187px 0;
+}
+
+.flag-AU {
+  background-position: -204px 0;
+}
+
+.flag-AW {
+  background-position: -221px 0;
+}
+
+.flag-AX {
+  background-position: -238px 0;
+}
+
+.flag-AZ {
+  background-position: -255px 0;
+}
+
+.flag-BA {
+  background-position: -272px 0;
+}
+
+.flag-BB {
+  background-position: -289px 0;
+}
+
+.flag-BD {
+  background-position: -306px 0;
+}
+
+.flag-BE {
+  background-position: -323px 0;
+}
+
+.flag-BG {
+  background-position: -340px 0;
+}
+
+.flag-BH {
+  background-position: -357px 0;
+}
+
+.flag-BI {
+  background-position: -374px 0;
+}
+
+.flag-BJ {
+  background-position: -391px 0;
+}
+
+.flag-BL {
+  background-position: -408px 0;
+}
+
+.flag-BM {
+  background-position: -425px 0;
+}
+
+.flag-BN {
+  background-position: -442px 0;
+}
+
+.flag-BO {
+  background-position: -459px 0;
+}
+
+.flag-BR {
+  background-position: -476px 0;
+}
+
+.flag-BS {
+  background-position: -493px 0;
+}
+
+.flag-BT {
+  background-position: -510px 0;
+}
+
+.flag-BW {
+  background-position: -527px 0;
+}
+
+.flag-BY {
+  background-position: -544px 0;
+}
+
+.flag-BZ {
+  background-position: -561px 0;
+}
+
+.flag-CA {
+  background-position: -578px 0;
+}
+
+.flag-CD {
+  background-position: -595px 0;
+}
+
+.flag-CF {
+  background-position: -612px 0;
+}
+
+.flag-CG {
+  background-position: -629px 0;
+}
+
+.flag-CH {
+  background-position: -646px 0;
+}
+
+.flag-CI {
+  background-position: -663px 0;
+}
+
+.flag-CL {
+  background-position: -680px 0;
+}
+
+.flag-CM {
+  background-position: -697px 0;
+}
+
+.flag-CN {
+  background-position: -714px 0;
+}
+
+.flag-CO {
+  background-position: -731px 0;
+}
+
+.flag-CR {
+  background-position: -748px 0;
+}
+
+.flag-CV {
+  background-position: -765px 0;
+}
+
+.flag-CY {
+  background-position: -782px 0;
+}
+
+.flag-CZ {
+  background-position: -799px 0;
+}
+
+.flag-DJ {
+  background-position: -816px 0;
+}
+
+.flag-DK {
+  background-position: -833px 0;
+}
+
+.flag-DM {
+  background-position: -850px 0;
+}
+
+.flag-DO {
+  background-position: -867px 0;
+}
+
+.flag-DZ {
+  background-position: -884px 0;
+}
+
+.flag-EC {
+  background-position: -901px 0;
+}
+
+.flag-EE {
+  background-position: -918px 0;
+}
+
+.flag-EG {
+  background-position: -935px 0;
+}
+
+.flag-EH {
+  background-position: -952px 0;
+}
+
+.flag-ER {
+  background-position: -969px 0;
+}
+
+.flag-ES {
+  background-position: -986px 0;
+}
+
+.flag-ET {
+  background-position: -1003px 0;
+}
+
+.flag-EU {
+  background-position: -1020px 0;
+}
+
+.flag-FI {
+  background-position: -1037px 0;
+}
+
+.flag-FJ {
+  background-position: -1054px 0;
+}
+
+.flag-FK {
+  background-position: -1071px 0;
+}
+
+.flag-FM {
+  background-position: -1088px 0;
+}
+
+.flag-FO {
+  background-position: -1105px 0;
+}
+
+.flag-FR,
+.flag-FX,
+.flag-GF,
+.flag-GP,
+.flag-MQ,
+.flag-NC,
+.flag-PF,
+.flag-PM,
+.flag-RE,
+.flag-TF,
+.flag-WF {
+  background-position: -1122px 0;
+}
+
+.flag-GA {
+  background-position: -1139px 0;
+}
+
+.flag-GB {
+  background-position: -1156px 0;
+}
+
+.flag-GD {
+  background-position: -1173px 0;
+}
+
+.flag-GE {
+  background-position: -1190px 0;
+}
+
+.flag-GG {
+  background-position: -1207px 0;
+}
+
+.flag-GH {
+  background-position: -1224px 0;
+}
+
+.flag-GL {
+  background-position: -1241px 0;
+}
+
+.flag-GM {
+  background-position: -1258px 0;
+}
+
+.flag-GN {
+  background-position: -1275px 0;
+}
+
+.flag-GQ {
+  background-position: -1292px 0;
+}
+
+.flag-GR {
+  background-position: -1309px 0;
+}
+
+.flag-GS {
+  background-position: -1326px 0;
+}
+
+.flag-GT {
+  background-position: -1343px 0;
+}
+
+.flag-GU {
+  background-position: -1360px 0;
+}
+
+.flag-GW {
+  background-position: -1377px 0;
+}
+
+.flag-GY {
+  background-position: -1394px 0;
+}
+
+.flag-HK {
+  background-position: -1411px 0;
+}
+
+.flag-HN {
+  background-position: -1428px 0;
+}
+
+.flag-HR {
+  background-position: -1445px 0;
+}
+
+.flag-HT {
+  background-position: -1462px 0;
+}
+
+.flag-HU {
+  background-position: -1479px 0;
+}
+
+.flag-ID {
+  background-position: -1496px 0;
+}
+
+.flag-IE {
+  background-position: -1513px 0;
+}
+
+.flag-IL {
+  background-position: -1530px 0;
+}
+
+.flag-IM {
+  background-position: -1547px 0;
+}
+
+.flag-IN {
+  background-position: -1564px 0;
+}
+
+.flag-IQ {
+  background-position: -1581px 0;
+}
+
+.flag-IS {
+  background-position: -1598px 0;
+}
+
+.flag-IT {
+  background-position: -1615px 0;
+}
+
+.flag-JE {
+  background-position: -1632px 0;
+}
+
+.flag-JM {
+  background-position: -1649px 0;
+}
+
+.flag-JO {
+  background-position: -1666px 0;
+}
+
+.flag-JP {
+  background-position: -1683px 0;
+}
+
+.flag-KE {
+  background-position: -1700px 0;
+}
+
+.flag-KG {
+  background-position: -1717px 0;
+}
+
+.flag-KH {
+  background-position: -1734px 0;
+}
+
+.flag-KI {
+  background-position: -1751px 0;
+}
+
+.flag-KM {
+  background-position: -1768px 0;
+}
+
+.flag-KN {
+  background-position: -1785px 0;
+}
+
+.flag-KP {
+  background-position: -1802px 0;
+}
+
+.flag-KR {
+  background-position: -1819px 0;
+}
+
+.flag-KV {
+  background-position: -1836px 0;
+}
+
+.flag-KW {
+  background-position: -1853px 0;
+}
+
+.flag-KY {
+  background-position: -1870px 0;
+}
+
+.flag-LA {
+  background-position: -1887px 0;
+}
+
+.flag-LC {
+  background-position: 0 0;
+}
+
+.flag-LK {
+  background-position: -17px 0;
+}
+
+.flag-LR {
+  background-position: -1938px 0;
+}
+
+.flag-LS {
+  background-position: -1955px 0;
+}
+
+.flag-LT {
+  background-position: -1972px 0;
+}
+
+.flag-LU {
+  background-position: -1989px 0;
+}
+
+.flag-LV {
+  background-position: -2006px 0;
+}
+
+.flag-LY {
+  background-position: -2023px 0;
+}
+
+.flag-MA {
+  background-position: -2040px 0;
+}
+
+.flag-ME {
+  background-position: -2057px 0;
+}
+
+.flag-MG {
+  background-position: -2074px 0;
+}
+
+.flag-MH {
+  background-position: -2091px 0;
+}
+
+.flag-ML {
+  background-position: -2108px 0;
+}
+
+.flag-MM {
+  background-position: -2125px 0;
+}
+
+.flag-MP {
+  background-position: -2142px 0;
+}
+
+.flag-MR {
+  background-position: -2159px 0;
+}
+
+.flag-MS {
+  background-position: -2176px 0;
+}
+
+.flag-MT {
+  background-position: -2193px 0;
+}
+
+.flag-MU {
+  background-position: -2210px 0;
+}
+
+.flag-MV {
+  background-position: -2227px 0;
+}
+
+.flag-MW {
+  background-position: -2244px 0;
+}
+
+.flag-MZ {
+  background-position: -2261px 0;
+}
+
+.flag-NA {
+  background-position: -2278px 0;
+}
+
+.flag-NE {
+  background-position: -2295px 0;
+}
+
+.flag-NF {
+  background-position: -2312px 0;
+}
+
+.flag-NG {
+  background-position: -2329px 0;
+}
+
+.flag-NI {
+  background-position: -2346px 0;
+}
+
+.flag-NL {
+  background-position: -2363px 0;
+}
+
+.flag-NO {
+  background-position: -2380px 0;
+}
+
+.flag-NP {
+  background-position: -2397px 0;
+}
+
+.flag-NR {
+  background-position: -2414px 0;
+}
+
+.flag-NZ {
+  background-position: -2431px 0;
+}
+
+.flag-OM {
+  background-position: -2448px 0;
+}
+
+.flag-PA {
+  background-position: -2465px 0;
+}
+
+.flag-PE {
+  background-position: -2482px 0;
+}
+
+.flag-PG {
+  background-position: -2499px 0;
+}
+
+.flag-PH {
+  background-position: -2516px 0;
+}
+
+.flag-PK {
+  background-position: -2533px 0;
+}
+
+.flag-PL {
+  background-position: -2550px 0;
+}
+
+.flag-PN {
+  background-position: -2567px 0;
+}
+
+.flag-PS {
+  background-position: -2584px 0;
+}
+
+.flag-PT {
+  background-position: -2601px 0;
+}
+
+.flag-PW {
+  background-position: -2618px 0;
+}
+
+.flag-PY {
+  background-position: -2635px 0;
+}
+
+.flag-QA {
+  background-position: -2652px 0;
+}
+
+.flag-RS {
+  background-position: -2669px 0;
+}
+
+.flag-RU {
+  background-position: -2686px 0;
+}
+
+.flag-RW {
+  background-position: -2703px 0;
+}
+
+.flag-SA {
+  background-position: -2720px 0;
+}
+
+.flag-SB {
+  background-position: -2737px 0;
+}
+
+.flag-SC {
+  background-position: -2754px 0;
+}
+
+.flag-SD {
+  background-position: -2771px 0;
+}
+
+.flag-SE {
+  background-position: -2788px 0;
+}
+
+.flag-SG {
+  background-position: -2805px 0;
+}
+
+.flag-SH {
+  background-position: -2822px 0;
+}
+
+.flag-SI {
+  background-position: -2839px 0;
+}
+
+.flag-SK {
+  background-position: -2856px 0;
+}
+
+.flag-SM {
+  background-position: -2873px 0;
+}
+
+.flag-SN {
+  background-position: -2890px 0;
+}
+
+.flag-SO {
+  background-position: -2907px 0;
+}
+
+.flag-SR {
+  background-position: -2924px 0;
+}
+
+.flag-SS {
+  background-position: -2941px 0;
+}
+
+.flag-ST {
+  background-position: -2958px 0;
+}
+
+.flag-SV {
+  background-position: -2975px 0;
+}
+
+.flag-SY {
+  background-position: -2992px 0;
+}
+
+.flag-SZ {
+  background-position: -3009px 0;
+}
+
+.flag-TC {
+  background-position: -3026px 0;
+}
+
+.flag-TD {
+  background-position: -3043px 0;
+}
+
+.flag-TG {
+  background-position: -3060px 0;
+}
+
+.flag-TH {
+  background-position: -3077px 0;
+}
+
+.flag-TJ {
+  background-position: -3094px 0;
+}
+
+.flag-TM {
+  background-position: -3111px 0;
+}
+
+.flag-TN {
+  background-position: -3128px 0;
+}
+
+.flag-TP {
+  background-position: -3145px 0;
+}
+
+.flag-TR {
+  background-position: -3162px 0;
+}
+
+.flag-TT {
+  background-position: -3179px 0;
+}
+
+.flag-TV {
+  background-position: -3196px 0;
+}
+
+.flag-TW {
+  background-position: -3213px 0;
+}
+
+.flag-TZ {
+  background-position: -3230px 0;
+}
+
+.flag-UA {
+  background-position: -3247px 0;
+}
+
+.flag-UG {
+  background-position: -3264px 0;
+}
+
+.flag-US {
+  background-position: -3281px 0;
+}
+
+.flag-UY {
+  background-position: -3298px 0;
+}
+
+.flag-UZ {
+  background-position: -3315px 0;
+}
+
+.flag-VC {
+  background-position: -3332px 0;
+}
+
+.flag-VE {
+  background-position: -3349px 0;
+}
+
+.flag-VG {
+  background-position: -3366px 0;
+}
+
+.flag-VI {
+  background-position: -3383px 0;
+}
+
+.flag-VN {
+  background-position: -3400px 0;
+}
+
+.flag-VU {
+  background-position: -3417px 0;
+}
+
+.flag-WS {
+  background-position: -3434px 0;
+}
+
+.flag-YE {
+  background-position: -3451px 0;
+}
+
+.flag-ZA {
+  background-position: -3468px 0;
+}
+
+.flag-ZM {
+  background-position: -3485px 0;
+}
+
+.flag-BF {
+  background-position: -3502px 0;
+}
+
+.flag-CU {
+  background-position: -3519px 0;
+}
+
+.flag-DE {
+  background-position: -3536px 0;
+}
+
+.flag-IR {
+  background-position: -3553px 0;
+}
+
+.flag-KZ {
+  background-position: -3570px 0;
+}
+
+.flag-LB {
+  background-position: -3587px 0;
+}
+
+.flag-LI {
+  background-position: -3604px 0;
+}
+
+.flag-MC {
+  background-position: -3621px 0;
+}
+
+.flag-MD {
+  background-position: -3638px 0;
+}
+
+.flag-MK {
+  background-position: -3655px 0;
+}
+
+.flag-MN {
+  background-position: -3672px 0;
+}
+
+.flag-MO {
+  background-position: -3706px 0;
+}
+
+.flag-MX {
+  background-position: -3723px 0;
+}
+
+.flag-MY {
+  background-position: -3740px 0;
+}
+
+.flag-PR {
+  background-position: -3757px 0;
+}
+
+.flag-RO {
+  background-position: -3774px 0;
+}
+
+.flag-SL {
+  background-position: -3791px 0;
+}
+
+.flag-TO {
+  background-position: -3808px 0;
+}
+
+.flag-VA {
+  background-position: -3825px 0;
+}
+
+.flag-ZW {
+  background-position: -3842px 0;
+}

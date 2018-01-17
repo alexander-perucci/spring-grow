@@ -38,5 +38,8 @@
 <%-- Gentelella Theme Style --%>
 <link href="${symbol_dollar}{pageContext.request.contextPath}/static/gentelella/build/css/custom.min.css" rel="stylesheet">
 
+<%-- Countries Flags --%>
+<link href="${symbol_dollar}{pageContext.request.contextPath}/static/plugin_extension/countries-flags/countries-flags.css" rel="stylesheet">
+
 <%-- Application Style --%>
 <link href="${symbol_dollar}{pageContext.request.contextPath}/static/application.css" rel="stylesheet">

@@ -28,6 +28,9 @@
 </head>
 
 <body class="login">
+   <div id="languages"><span class="bfh-languages" data-language="en_US" data-flags="true">
+      <a href="?lang=en"><i class="glyphicon flag-US"></i> English</span></a> <a href="?lang=it"><i class="glyphicon flag-IT"></i> Italiano</span></a>
+   </div>
    <div>
       <a class="hiddenanchor" id="signup"></a> <a class="hiddenanchor" id="signin"></a> <a class="hiddenanchor" id="forgot"></a>
 

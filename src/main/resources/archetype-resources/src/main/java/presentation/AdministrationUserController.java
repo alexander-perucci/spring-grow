@@ -54,7 +54,7 @@ public class AdministrationUserController {
    }
 
    @RequestMapping("/list")
-   public String showList() {
+   public String elenco() {
       return "administration.user.list";
    }
 

@@ -49,7 +49,7 @@
                   <div class="modal-content">
                      <div class="modal-header">
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                           <span aria-hidden="true">&times;</span>
+                           <span aria-hidden="true">�</span>
                         </button>
                         <h4 class="modal-title" > <i class="fa fa-exclamation-triangle"></i> <spring:message code="common.caution" /></h4>
                      </div>

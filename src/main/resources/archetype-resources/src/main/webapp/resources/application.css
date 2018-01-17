@@ -117,6 +117,13 @@ input#username.parsley-success.custom-parsley-success, input.parsley-success.cus
    background-repeat: no-repeat;
    padding-right: 40px;
 }
+
+#languages{
+   text-align: right;
+}
+#languages a{
+   margin-right: 10px;
+}
 /*===== END common =====*/
 
 /*===== START administration =====*/
