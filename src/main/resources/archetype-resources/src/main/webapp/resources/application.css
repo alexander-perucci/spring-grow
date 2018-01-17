@@ -1,3 +1,19 @@
+/*===== START override default color =====*/
+body {
+    background: #252830;
+}
+.left_col {
+    background: #252830;
+}
+.sidebar-footer {
+    background: #252830;
+}
+.sidebar-footer a {
+    background: #252830;
+    color: #fff;
+}
+/*===== END override default color =====*/
+
 /*===== START login =====*/
 
 /* used for add new page in the login*/
